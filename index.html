@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test suite coverage for Media Source Extensions</title>
+    <meta charset='utf-8'>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c-common'
+            async class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        specStatus: "unofficial",
+        shortName: "media-source-testcoverage",
+        editors: [{
+          name: "François Daoust",
+          url: "http://www.w3.org/People/#fd",
+          company: "W3C",
+          companyURL: "http://w3.org/"
+        }],        
+        wg: "HTML Media Extensions Working Group",
+        wgURI: "http://www.w3.org/html/wg/",
+        wgPublicList: "public-html-media",
+        wgPatentURI: "http://www.w3.org/2004/01/pp-impl/40318/status",
+      };
+    </script>
+    <style type="text/css">
+      th, td {
+        border-bottom: thin solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        This document provides a rough evaluation of the coverage of the Media Source test suite against the Media Source Extensions specification [[!MEDIA-SOURCE]].
+      </p>
+    </section>
+
+    <section id='sotd'>
+      <p>
+        This document is not even maintained.
+      </p>
+    </section>
+
+    <section id='table'>
+      <h2>Test coverage</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Name</th>
+            <th>Test(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>How to update the table</h2>
+
+      <section>
+        <h2>How to update the rows</h2>
+        <p>
+          To update the rows that compose the coverage table, run the following steps:
+        </p>
+        <ol>
+          <li>Open the <a href="https://w3c.github.io/media-source/">Media Source Extensions</a> specification in your favorite browser</li>
+          <li>Run the following code in a console window to build the internal representation used to render the table above.</li>
+          <li>Copy the result and paste it in the <code>toc.js</code> file in the same folder as the source of this document.</li>
+          <li>Refresh this document.</li>
+        </ol>
+        <pre>
+// List of section titles to skip
+// (because they don't contain testable assertions per se)
+var sectionsToIgnore = [
+  'Introduction',
+  'Byte Stream Formats',
+  'Examples',
+  'Acknowledgments',
+  'Revision History',
+  'References',
+  'Event Summary',
+  'Track Buffers'
+];
+
+
+// Custom forEach function for querySelectorAll results
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, array[i], i);
+  }
+};
+
+
+// Parse the table of contents and extract the sections of interest
+var extractTocRecursively = function (tocEntry, section) {
+  forEach(tocEntry.querySelectorAll('ul > li'), function (subTocEntry) {
+    if (subTocEntry.parentNode.parentNode !== tocEntry) {
+      return;
+    }
+
+    // Extract link and main title (skipping the section number in the "span")
+    var link = subTocEntry.querySelector('a');
+    var name = link.firstChild.nextSibling.textContent;
+    if (sectionsToIgnore.includes(name)) {
+      return;
+    }
+
+    var subSection = {
+      number: link.firstChild.textContent.trim(),
+      name: name,
+      url: link.getAttribute('href').substring(1)
+    };
+
+    if (!section.children) {
+      section.children = [];
+    }
+    section.children.push(subSection);
+    extractTocRecursively(subTocEntry, subSection);
+  });
+};
+
+var toc = { name: 'Table of Contents' };
+extractTocRecursively(document.querySelector('#toc'), toc);
+
+
+// Complete the extracted structure with attributes, methods, constructors
+// definitions.
+var addObjectPropertiesRecursively = function (section) {
+  if (section.children) {
+    section.children.forEach(addObjectPropertiesRecursively);
+    return;
+  }
+  forEach(document.querySelectorAll(
+    '#' + section.url + ' > dl:not(.switch) > dt'),
+    function (dfn) {
+      var type = dfn.parentNode.getAttribute('class') || 's';
+      var subSection = {
+        name: dfn.innerText,
+        url: dfn.getAttribute('id'),
+        type: type.substring(0, type.length - 1)
+      }
+      if (!section.children) {
+        section.children = [];
+      }
+      section.children.push(subSection);
+    }
+  );
+};
+addObjectPropertiesRecursively(toc);
+
+
+console.log(JSON.stringify(toc, null, 2));
+        </pre>
+      </section>
+
+      <section>
+        <h2>How to update tests info</h2>
+        <p>
+          Tests info appear in the <code>tests.js</code> file along the source of this document. Nothing magic there, add new tests to the file and/or complete test info to fill the last column in the table.
+        </p>
+      </section>        
+    </section>
+  </body>
+
+  <script type="text/javascript" src="toc.js"></script>
+  <script type="text/javascript" src="tests.js"></script>
+  <script type="text/javascript">
+    // Index tests by section
+    var testsBySection = {};
+    tests.forEach(function (test) {
+      var checks = [];
+      if (Array.isArray(test.checks)) {
+        checks = test.checks;
+      }
+      else if (test.checks) {
+        checks = [test.checks];
+      }
+      checks.forEach(function (check) {
+        if (!testsBySection[check]) {
+          testsBySection[check] = [];
+        }
+        testsBySection[check].push(test);
+      });
+      if (checks.length === 0) {
+        if (test.useless) {
+          if (!testsBySection['useless']) {
+            testsBySection['useless'] = [];
+          }
+          testsBySection['useless'].push(test);
+        }
+        else {
+          if (!testsBySection['unknown']) {
+            testsBySection['unknown'] = [];
+          }
+          testsBySection['unknown'].push(test);
+        }
+      }
+    });
+
+
+    var getTestLink = function (test) {
+      var link = '';
+      if (test.definedIn === 'chromium') {
+        link = '<a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/' +
+          test.url + '" target="media-source-testsuite-chromium"' +
+          (test.comment ? ' title="' + test.comment + '"' : '') + '>' +
+          test.url + '</a> (chromium)';
+      }
+      else {
+        link = '<a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/' +
+          test.url + '" target="media-source-testsuite"' +
+          (test.comment ? ' title="' + test.comment + '"' : '') + '>' +
+          test.url + '</a>';
+      }
+      return link;
+    };
+
+
+    // Create the table out of toc.js and tests.js variables
+    var buildTableRecursively = function (section, prefix) {
+      var link = '<a href="https://w3c.github.io/media-source/#' +
+        section.url + '" target="media-source">' +
+        (section.number ? (section.number + ' ') : '') + 
+        section.name +
+        '</a>';
+      var tests = testsBySection['#' + section.url];
+      var testsTxt = '';
+      if (tests) {
+        tests.forEach(function (test) {
+          if (testsTxt) {
+            testsTxt += ',<br/>';
+          }
+          testsTxt += getTestLink(test);
+        });
+      }
+
+      if ((section !== toc) && !section.children) {
+        tableBody.innerHTML += '<tr>' +
+          '<td>' + prefix + '</td>' +
+          '<td>' + link + '</td>' +
+          '<td>' + testsTxt + '</td>' +
+          '</tr>';
+      }
+
+      if (!section.children) {
+        return;
+      }
+      if (section === toc) {
+        prefix = '';
+      }
+      else {
+        if (prefix) {
+          prefix += '<br/>&gt; ';
+        }
+        prefix += link;
+      }
+      section.children.forEach(function (subSection) {
+        buildTableRecursively(subSection, prefix);
+      });
+    };
+
+    var tableBody = document.querySelector('#table > table > tbody');
+    buildTableRecursively(toc);
+
+    var testsTxt = '';
+    if (testsBySection['unknown'] && (testsBySection['unknown'].length > 0)) {
+      testsBySection['unknown'].forEach(function (test) {
+        if (testsTxt) {
+          testsTxt += ',<br/>';
+        }
+        testsTxt += getTestLink(test);        
+      });
+      tableBody.innerHTML += '<tr>' +
+        '<td></td>' +
+        '<td>Unknown</td>' +
+        '<td>' + testsTxt + '</td>';
+    }
+
+    testsTxt = '';
+    if (testsBySection['useless'] && (testsBySection['useless'].length > 0)) {
+      testsBySection['useless'].forEach(function (test) {
+        if (testsTxt) {
+          testsTxt += ',<br/>';
+        }
+        testsTxt += getTestLink(test);        
+      });
+      tableBody.innerHTML += '<tr>' +
+        '<td></td>' +
+        '<td>May not be needed</td>' +
+        '<td>' + testsTxt + '</td>';
+    }
+  </script>
+</html>
