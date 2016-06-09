@@ -138,6 +138,7 @@ var tests = [
       '#widl-MediaSource-duration',
       '#widl-MediaSource-readyState',
       '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#end-of-stream-algorithm',
       '#widl-SourceBuffer-timestampOffset',
       '#widl-SourceBuffer-abort-void'
     ]
@@ -166,6 +167,7 @@ var tests = [
       '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
       '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer',
       '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#end-of-stream-algorithm',
       '#widl-SourceBuffer-abort-void'
     ],
     comment: 'checks closed clauses in various algorithms'
@@ -174,21 +176,32 @@ var tests = [
     url: 'mediasource-config-change-mp4|webm-*.html',
     checks: [
       '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
-      '#widl-SourceBuffer-timestampOffset'
+      '#widl-SourceBuffer-timestampOffset',
+      '#widl-MediaSource-duration',
+      '#duration-change-algorithm'
     ]
   },
   {
     url: 'mediasource-duration-boundaryconditions.html',
-    checks: '#widl-MediaSource-duration'
+    checks: [
+      '#widl-MediaSource-duration',
+      '#duration-change-algorithm'
+    ]
   },
   {
     url: 'mediasource-duration.html',
-    checks: '#widl-MediaSource-duration',
+    checks: [
+      '#widl-MediaSource-duration',
+      '#duration-change-algorithm'
+    ],
     comment: 'may go too far, as it also tests MediaElement events'
   },
   {
     url: 'mediasource-endofstream-invaliderror.html',
-    checks: '#widl-MediaSource-endOfStream-void-EndOfStreamError-error'
+    checks: [
+      '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#end-of-stream-algorithm'
+    ]
   },
   {
     url: 'mediasource-getvideoplaybackquality.html',
