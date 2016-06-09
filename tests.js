@@ -260,7 +260,10 @@ var tests = [
   },
   {
     url: 'mediasource-sourcebuffer-mode.html',
-    checks: '#widl-SourceBuffer-mode'
+    checks: [
+      '#widl-SourceBuffer-mode',
+      '#widl-SourceBuffer-timestampOffset'
+    ]
   },
   {
     url: 'mediasource-sourcebufferlist.html',
