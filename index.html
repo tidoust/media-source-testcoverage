@@ -63,6 +63,13 @@
       </ul>
     </section>
 
+    <section>
+      <h2>Remarks</h2>
+      <p>
+        All occurrences of <code>InvalidAccessError</code> in existing test files should be replaced by <code>TypeError</code> (changed in the spec in February 2016). The table below assumes that this has already been fixed.
+      </p>
+    </section>
+
     <section id='table'>
       <h2>Test coverage</h2>
 
@@ -236,6 +243,7 @@ console.log(JSON.stringify(toc, null, 2));
 
 
     var getTestLink = function (test) {
+      // TODO: escape double quotes for title attribute
       var link = '';
       if (test.definedIn === 'chromium') {
         link = '<a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/' +
@@ -271,10 +279,12 @@ console.log(JSON.stringify(toc, null, 2));
         });
       }
 
+      var cover = {};
       var covered = 'Unknown';
       var coverTxt = '';
       if (coverage.hasOwnProperty(section.url)) {
-        covered = coverage[section.url];
+        cover = coverage[section.url];
+        covered = (cover.coverage ? cover.coverage : cover);
       }
       if ((section !== toc) && !section.children) {
         coverTxt = '<span class="coverage';
@@ -286,7 +296,14 @@ console.log(JSON.stringify(toc, null, 2));
             coverTxt += ' workneeded';
           }
         }
-        coverTxt += '">';
+        coverTxt += '"';
+        if (cover.comments) {
+          // TODO: escape double quotes
+          coverTxt += ' title="' +
+          (Array.isArray(cover.comments) ? cover.comments.join('\n') : cover.comments) +
+          '"';
+        }
+        coverTxt += '>';
         if (covered === 'Unknown') {
           coverTxt += '?';
         }

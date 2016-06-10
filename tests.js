@@ -54,7 +54,8 @@ var tests = [
       '#widl-VideoTrack-sourceBuffer',
       '#mediasource-detach',
       '#widl-MediaSource-sourceBuffers',
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data'
+      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
+      '#sourcebuffer-buffer-append'
     ],
     definedIn: 'chromium',
     comment: 'Check that media tracks and their properties are populated properly. Checks visible outcomes of SourceBuffer algorithms (e.g. 3.5.1, 3.5.12), removeSourceBuffer (2.2), detach from a media element (2.4.2)'
@@ -78,7 +79,8 @@ var tests = [
       '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
       '#mediasource-attach',
       '#mediasource-detach',
-      '#end-of-stream-algorithm'
+      '#end-of-stream-algorithm',
+      '#sourcebuffer-buffer-append'
     ],
     definedIn: 'chromium'
   },
@@ -140,7 +142,8 @@ var tests = [
       '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
       '#end-of-stream-algorithm',
       '#widl-SourceBuffer-timestampOffset',
-      '#widl-SourceBuffer-abort-void'
+      '#widl-SourceBuffer-abort-void',
+      '#sourcebuffer-buffer-append'
     ]
   },
   {
@@ -154,7 +157,9 @@ var tests = [
     url: 'mediasource-buffered.html',
     checks: [
       '#htmlmediaelement-extensions',
-      '#widl-SourceBuffer-buffered'
+      '#widl-SourceBuffer-buffered',
+      '#widl-MediaSource-sourceBuffers',
+      '#widl-MediaSource-activeSourceBuffers'
     ]
   },
   {
@@ -173,12 +178,13 @@ var tests = [
     comment: 'checks closed clauses in various algorithms'
   },
   {
-    url: 'mediasource-config-change-mp4|webm-*.html',
+    url: 'mediasource-config-changes.js',
     checks: [
       '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
       '#widl-SourceBuffer-timestampOffset',
       '#widl-MediaSource-duration',
-      '#duration-change-algorithm'
+      '#duration-change-algorithm',
+      '#sourcebuffer-buffer-append'
     ]
   },
   {
@@ -215,7 +221,7 @@ var tests = [
   {
     url: 'mediasource-multiple-attach.html',
     checks: '#mediasource-attach',
-    comment: 'should check 2.4.1 Attaching to a media element, but I do not see anything in the spec that mandates that behavior'
+    comment: 'checks first condition of attaching to a media element (readyState not closed)'
   },
   {
     url: 'mediasource-play-then-seek-back.html',
@@ -262,7 +268,8 @@ var tests = [
     url: 'mediasource-sourcebuffer-mode.html',
     checks: [
       '#widl-SourceBuffer-mode',
-      '#widl-SourceBuffer-timestampOffset'
+      '#widl-SourceBuffer-timestampOffset',
+      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
     ]
   },
   {
@@ -270,7 +277,9 @@ var tests = [
     checks: [
       '#buffer-monitoring',
       '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-activeSourceBuffers'
+      '#widl-MediaSource-activeSourceBuffers',
+      '#mediasource-detach',
+      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
     ],
     comment: 'checks various checks on sourceBuffers list'
   },
