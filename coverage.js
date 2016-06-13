@@ -172,6 +172,12 @@ var coverage = {
     ],
     assignee: '@plehegar'
   },
+  'sourcebuffer-segment-parser-loop': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-reset-parser-state': {
+    assignee: '@plehegar'
+  },
   'sourcebuffer-append-error': {
     coverage: 40,
     comments: [
@@ -194,13 +200,40 @@ var coverage = {
     comments: 'TODO: need to check whether Segment Parser Loop is run',
     assignee: '@plehegar'
   },
-  'sourcebuffer-stream-append-loop': {
-    coverage: 0,
-    assignee: '@plehegar'
-  },
+  'sourcebuffer-stream-append-loop': 0,
   'sourcebuffer-range-removal': {
     coverage: 90,
     comments: 'Not sure step 6 is tested or easily testable',
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-init-segment-received': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-default-track-language': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-default-track-label': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-default-track-kinds': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-coded-frame-processing': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-coded-frame-removal': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-coded-frame-eviction': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-audio-splice-frame-algorithm': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-audio-splice-rendering-algorithm': {
+    assignee: '@plehegar'
+  },
+  'sourcebuffer-text-splice-frame-algorithm': {
     assignee: '@plehegar'
   },
   'widl-SourceBufferList-length': {
@@ -282,5 +315,8 @@ var coverage = {
   },
   'widl-AudioTrack-sourceBuffer': 100,
   'widl-VideoTrack-sourceBuffer': 100,
-  'widl-TextTrack-sourceBuffer': 0
+  'widl-TextTrack-sourceBuffer': {
+    coverage: 0,
+    assignee: '@plehegar'
+  }
 };

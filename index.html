@@ -198,7 +198,7 @@ console.log(JSON.stringify(toc, null, 2));
       <section>
         <h2>How to update the coverage info</h2>
         <p>
-          To update the information displayed in the last column, edit the <code>coverage.js</code> file that sits along the source of this document. The keys of the <code>coverage</code> object are the ID of the sections, and the values are rough estimate of the test coverage in percent.
+          To update the information displayed in the last column, edit the <code>coverage.js</code> file that sits along the source of this document. The keys of the <code>coverage</code> object are the ID of the sections, and the values are rough estimate of the test coverage in percent, or an object with a <code>coverage</code> key that sets the coverage percentage, a <code>comments</code> key that lists possibles comments about the coverage (in an array of strings), and an <code>assignee</code> key that sets the person responsible for updating the test suite to cover the section.
         </p>
         <p>
           If a section does not appear in the <code>coverage</code> object, a question mark will appear in the last column to indicate that coverage is unknown at this stage.
@@ -287,7 +287,9 @@ console.log(JSON.stringify(toc, null, 2));
       var assigneeTxt = '<span class="coverage">?</span>';
       if (coverage.hasOwnProperty(section.url)) {
         cover = coverage[section.url];
-        covered = ((typeof cover.coverage !== 'undefined') ? cover.coverage : cover);
+        covered = ((typeof cover.coverage !== 'undefined') ?
+          cover.coverage :
+          ((cover.assignee || cover.comments) ? 'Unknown' : cover));
         if (cover.assignee) {
           assigneeTxt = cover.assignee;
         }
