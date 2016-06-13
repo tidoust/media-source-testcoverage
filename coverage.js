@@ -140,6 +140,7 @@ var coverage = {
     coverage: 80,
     comments: 'TODO: need to check whether Segment Parser Loop is run'
   },
+  'sourcebuffer-stream-append-loop': 0,
   'sourcebuffer-range-removal': {
     coverage: 90,
     comments: 'Not sure step 6 is tested or easily testable'
