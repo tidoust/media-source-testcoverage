@@ -121,6 +121,14 @@ var coverage = {
       'No test for step 6.2'
     ]
   },
+  'sourcebuffer-append-error': {
+    coverage: 40,
+    comments: [
+      'No test for step 1 (requires decode error flag to be false to lead to visible behavior)',
+      'Test for step 5 could perhaps check readyState and other events to ensure end of stream algorithm actually ran',
+      'The different conditions that trigger the algorithm are not really tested',
+    ]
+  },
   'sourcebuffer-prepare-append': {
     coverage: 80,
     comments: [

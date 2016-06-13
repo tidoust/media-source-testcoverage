@@ -80,7 +80,9 @@ var tests = [
       '#mediasource-attach',
       '#mediasource-detach',
       '#end-of-stream-algorithm',
-      '#sourcebuffer-buffer-append'
+      '#sourcebuffer-buffer-append',
+      '#sourcebuffer-segment-parser-loop',
+      '#sourcebuffer-append-error'
     ],
     definedIn: 'chromium'
   },
