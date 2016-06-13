@@ -32,10 +32,10 @@
         font-weight: bold;
         color: #e67300;
       }
-      .coverage.covered {
+      .covered {
         color: #0c0;
       }
-      .coverage.workneeded {
+      .workneeded {
         color: #c00;
       }
     </style>
@@ -80,6 +80,7 @@
             <th>Name</th>
             <th>Test(s)</th>
             <th>Covered</th>
+            <th>Assignee</th>
           </tr>
         </thead>
         <tbody>
@@ -282,9 +283,16 @@ console.log(JSON.stringify(toc, null, 2));
       var cover = {};
       var covered = 'Unknown';
       var coverTxt = '';
+      var assigneeTxt = '<span class="coverage">?</span>';
       if (coverage.hasOwnProperty(section.url)) {
         cover = coverage[section.url];
         covered = ((typeof cover.coverage !== 'undefined') ? cover.coverage : cover);
+        if (cover.assignee) {
+          assigneeTxt = cover.assignee;
+        }
+        else if (covered === 100) {
+          assigneeTxt = '';
+        }
       }
       if ((section !== toc) && !section.children) {
         coverTxt = '<span class="coverage';
@@ -322,6 +330,7 @@ console.log(JSON.stringify(toc, null, 2));
           '<td>' + link + '</td>' +
           '<td>' + testsTxt + '</td>' +
           '<td>' + coverTxt + '</td>' +
+          '<td>' + assigneeTxt + '</td>'
           '</tr>';
       }
 
@@ -357,6 +366,7 @@ console.log(JSON.stringify(toc, null, 2));
         '<td></td>' +
         '<td>Unknown</td>' +
         '<td>' + testsTxt + '</td>' +
+        '<td></td>' +
         '<td></td>';
     }
 
@@ -372,6 +382,7 @@ console.log(JSON.stringify(toc, null, 2));
         '<td></td>' +
         '<td>May not be needed</td>' +
         '<td>' + testsTxt + '</td>' +
+        '<td></td>' +
         '<td></td>';
     }
   </script>
