@@ -65,6 +65,11 @@ var toc = {
               "type": "method"
             },
             {
+              "name": "clearLiveSeekableRange",
+              "url": "widl-MediaSource-clearLiveSeekableRange-void",
+              "type": "method"
+            },
+            {
               "name": "endOfStream",
               "url": "widl-MediaSource-endOfStream-void-EndOfStreamError-error",
               "type": "method"
@@ -77,6 +82,11 @@ var toc = {
             {
               "name": "removeSourceBuffer",
               "url": "widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer",
+              "type": "method"
+            },
+            {
+              "name": "setLiveSeekableRange",
+              "url": "widl-MediaSource-setLiveSeekableRange-void-double-start-double-end",
               "type": "method"
             }
           ]
@@ -446,11 +456,6 @@ var toc = {
               "type": "attribute"
             },
             {
-              "name": "kinds of type sequence<DOMString>, readonly",
-              "url": "widl-TrackDefault-kinds",
-              "type": "attribute"
-            },
-            {
               "name": "label of type DOMString, readonly",
               "url": "widl-TrackDefault-label",
               "type": "attribute"
@@ -464,6 +469,18 @@ var toc = {
               "name": "type of type TrackDefaultType, readonly",
               "url": "widl-TrackDefault-type",
               "type": "attribute"
+            }
+          ]
+        },
+        {
+          "number": "6.3",
+          "name": "Methods",
+          "url": "methods-3",
+          "children": [
+            {
+              "name": "getKinds",
+              "url": "widl-TrackDefault-getKinds-sequence-DOMString",
+              "type": "method"
             }
           ]
         }
@@ -501,7 +518,7 @@ var toc = {
         {
           "number": "7.3",
           "name": "Methods",
-          "url": "methods-3",
+          "url": "methods-4",
           "children": [
             {
               "name": "TrackDefault",
@@ -520,7 +537,7 @@ var toc = {
         {
           "number": "8.1",
           "name": "Methods",
-          "url": "methods-4",
+          "url": "methods-5",
           "children": [
             {
               "name": "createObjectURL, static",
@@ -544,7 +561,7 @@ var toc = {
         {
           "number": "10.1",
           "name": "Methods",
-          "url": "methods-5",
+          "url": "methods-6",
           "children": [
             {
               "name": "getVideoPlaybackQuality",

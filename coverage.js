@@ -19,6 +19,7 @@ var coverage = {
       'No test on generate timestamps flag, which implies audio/mpeg audio/aac support'
     ]
   },
+  'widl-MediaSource-clearLiveSeekableRange-void': 0,
   'widl-MediaSource-endOfStream-void-EndOfStreamError-error': 100,
   'widl-MediaSource-isTypeSupported-boolean-DOMString-type': {
     coverage: 90,
@@ -33,6 +34,7 @@ var coverage = {
       'Step 11 (Destroy all resources for sourceBuffer) is somewhat meaningless'
     ]
   },
+  'widl-MediaSource-setLiveSeekableRange-void-double-start-double-end': 0,
   'active-source-buffer-changes': 0,
   'mediasource-attach': {
     coverage: 70,
@@ -94,5 +96,6 @@ var coverage = {
     comments: 'Not sure step 6 is tested or easily testable'
   },
   'widl-SourceBufferList-onaddsourcebuffer': 0,
-  'widl-SourceBufferList-onremovesourcebuffer': 0
+  'widl-SourceBufferList-onremovesourcebuffer': 0,
+  'widl-TrackDefault-getKinds-sequence-DOMString': 0
 };
