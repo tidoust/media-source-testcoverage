@@ -16,7 +16,7 @@ var coverage = {
     coverage: 90,
     comments: [
       'Test for step 1 in mediasource-addsourcebuffer incorrectly assumes InvalidAccessError instead of TypeError',
-      'No test on generate timestamps flag, which implies audio/mpeg audio/aac support'
+      'No test on generate timestamps flag (but this requires audio/mpeg audio/aac support)'
     ]
   },
   'widl-MediaSource-clearLiveSeekableRange-void': 0,
@@ -48,6 +48,19 @@ var coverage = {
     coverage: 95,
     comments: 'There may be other initial conditions to test'
   },
+  'mediasource-seeking': {
+    coverage: 90,
+    comments: [
+      'Seems OK but...',
+      'Can we do any better to check step 2, 3, and 4 than to check currentTime after seek?',
+      'Relevant tests in mediasource-redundant-seek.html and mediasource-seek-during-pending-seek.html',
+      'Note most other tests are against the HTML5 seek algorithm itself, do we really need them?'
+    ]
+  },
+  'buffer-monitoring': {
+    coverage: 0,
+    comments: 'Hmm, shouldn\'t the event steps in that algorithm be dropped? HTML5.1 already triggers these events whenever readyState gets changed'
+  },
   'duration-change-algorithm': {
     coverage: 80,
     comments: [
@@ -65,6 +78,18 @@ var coverage = {
   'widl-SourceBuffer-appendWindowEnd': 100,
   'widl-SourceBuffer-appendWindowStart': 100,
   'widl-SourceBuffer-audioTracks': 100,
+  'widl-SourceBuffer-buffered': {
+    coverage: 90,
+    comments: 'Tests seem to cover all steps but we may want to check more complex cases that create multiple ranges'
+  },
+  'widl-SourceBuffer-mode': {
+    coverage: 80,
+    comments: [
+      'No test for step 4 on generate timestamps flag (but this requires audio/mpeg audio/aac support)',
+      'No test for step 7 on groups start/end timestamps (but hard to test)'
+    ]
+  },
+  'widl-SourceBuffer-trackDefaults': 100,
   'widl-SourceBuffer-onabort': 0,
   'widl-SourceBuffer-onerror': 0,
   'widl-SourceBuffer-onupdate': 0,
@@ -84,6 +109,11 @@ var coverage = {
       'Not sure step 5 is tested or easily testable'
     ]
   },
+  'widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data': {
+    coverage: 100,
+    comments: 'Tests in mediasource-append-buffer.html are enough to cover all steps'
+  },
+  'widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize': 0,
   'widl-SourceBuffer-remove-void-double-start-unrestricted-double-end': {
     coverage: 90,
     comments: [
@@ -91,11 +121,81 @@ var coverage = {
       'No test for step 6.2'
     ]
   },
+  'sourcebuffer-prepare-append': {
+    coverage: 80,
+    comments: [
+      'No test for step 3 (HTMLMediaElement.error)',
+      'No test for step 6 (but can it be tested? Size of buffer is implementation specific)'
+    ]
+  },
+  'sourcebuffer-buffer-append': {
+    coverage: 80,
+    comments: 'TODO: need to check whether Segment Parser Loop is run'
+  },
   'sourcebuffer-range-removal': {
     coverage: 90,
     comments: 'Not sure step 6 is tested or easily testable'
   },
+  'widl-SourceBufferList-length': {
+    coverage: 100,
+    comments: 'Typically covered by tests on activeSourceBuffers and sourceBuffers'
+  },
+  'widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index': {
+    coverage: 50,
+    comments: [
+      'No test for step 1 (undefined)',
+      'Typically covered by tests on activeSourceBuffers and sourceBuffers'
+    ]
+  },
   'widl-SourceBufferList-onaddsourcebuffer': 0,
   'widl-SourceBufferList-onremovesourcebuffer': 0,
-  'widl-TrackDefault-getKinds-sequence-DOMString': 0
+  'widl-VideoPlaybackQuality-corruptedVideoFrames': {
+    coverage: 50,
+    comments: 'No test that the counter actually does something'
+  },
+  'widl-VideoPlaybackQuality-creationTime': {
+    coverage: 50,
+    comments: 'No test that the counter actually returns something close to Performance.now()'
+  },
+  'widl-VideoPlaybackQuality-droppedVideoFrames': {
+    coverage: 50,
+    comments: 'No test that the counter actually does something'
+  },
+  'widl-VideoPlaybackQuality-totalFrameDelay': {
+    coverage: 50,
+    comments: 'No test that the counter actually does something'
+  },
+  'widl-VideoPlaybackQuality-totalVideoFrames': {
+    coverage: 50,
+    comments: 'No test that the counter actually does something'
+  },
+  'widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID': {
+    coverage: 50,
+    comments: [
+      'No test for step 1 (bad language)'
+    ]
+  },
+  'widl-TrackDefault-byteStreamTrackID': 100,
+  'widl-TrackDefault-label': 100,
+  'widl-TrackDefault-language': 100,
+  'widl-TrackDefault-type': 100,
+  'widl-TrackDefault-getKinds-sequence-DOMString': 0,
+  'widl-ctor-TrackDefaultList--sequence-TrackDefault--trackDefaults': 100,
+  'widl-TrackDefaultList-length': 100,
+  'widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index': 100,
+  'widl-URL-createObjectURL-DOMString-MediaSource-mediaSource': 100,
+  'htmlmediaelement-extensions': {
+    coverage: 40,
+    comments: [
+      'No test for the seekable attribute',
+      'For buffered, tests seem to cover all steps but we may want to check more complex cases that create multiple ranges'
+    ]
+  },
+  'widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality': {
+    coverage: 50,
+    comments: 'No test that the properties return meaningful values'
+  },
+  'widl-AudioTrack-sourceBuffer': 100,
+  'widl-VideoTrack-sourceBuffer': 100,
+  'widl-TextTrack-sourceBuffer': 0
 };

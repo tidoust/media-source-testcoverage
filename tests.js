@@ -116,12 +116,19 @@ var tests = [
   },
   {
     url: 'mediasource-trackdefault.html',
-    checks: '#widl-ctor-TrackDefaulTrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMStrinkinds-DOMString-byteStreamTrackID',
-    definedIn: 'chromium'
+    checks: [
+      '#widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID'
+    ],
+    definedIn: 'chromium',
+    comment: 'Test needs to be updated to check getKinds instead of kinds which no longer exists'
   },
   {
     url: 'mediasource-trackdefaultlist.html',
-    checks: '#widl-ctor-TrackDefaultLissequence-TrackDefaultrackDefaults',
+    checks: [
+      '#widl-ctor-TrackDefaultList--sequence-TrackDefault--trackDefaults',
+      '#widl-TrackDefaultList-length',
+      '#widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index'
+    ],
     definedIn: 'chromium'
   },
   {
@@ -211,7 +218,14 @@ var tests = [
   },
   {
     url: 'mediasource-getvideoplaybackquality.html',
-    checks: '#widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality'
+    checks: [
+      '#widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality',
+      '#widl-VideoPlaybackQuality-corruptedVideoFrames',
+      '#widl-VideoPlaybackQuality-creationTime',
+      '#widl-VideoPlaybackQuality-droppedVideoFrames',
+      '#widl-VideoPlaybackQuality-totalFrameDelay',
+      '#widl-VideoPlaybackQuality-totalVideoFrames'
+    ]
   },
   {
     url: 'mediasource-is-type-supported.html',
@@ -244,7 +258,10 @@ var tests = [
   },
   {
     url: 'mediasource-remove.html',
-    checks: '#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end'
+    checks: [
+      '#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end',
+      '#sourcebuffer-range-removal'
+    ]
   },
   {
     url: 'mediasource-removesourcebuffer.html',
@@ -262,7 +279,11 @@ var tests = [
   },
   {
     url: 'mediasource-sequencemode-append-buffer.html',
-    checks: '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data'
+    checks: [
+      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
+      '#sourcebuffer-prepare-append',
+      '#sourcebuffer-buffer-append'
+    ]
   },
   {
     url: 'mediasource-sourcebuffer-mode.html',
@@ -275,7 +296,6 @@ var tests = [
   {
     url: 'mediasource-sourcebufferlist.html',
     checks: [
-      '#buffer-monitoring',
       '#widl-MediaSource-sourceBuffers',
       '#widl-MediaSource-activeSourceBuffers',
       '#mediasource-detach',

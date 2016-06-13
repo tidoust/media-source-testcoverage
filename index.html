@@ -284,7 +284,7 @@ console.log(JSON.stringify(toc, null, 2));
       var coverTxt = '';
       if (coverage.hasOwnProperty(section.url)) {
         cover = coverage[section.url];
-        covered = (cover.coverage ? cover.coverage : cover);
+        covered = ((typeof cover.coverage !== 'undefined') ? cover.coverage : cover);
       }
       if ((section !== toc) && !section.children) {
         coverTxt = '<span class="coverage';
