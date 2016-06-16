@@ -27,7 +27,7 @@ var coverage = {
     assignee: '@tidoust'
   },
   'widl-MediaSource-clearLiveSeekableRange-void': {
-    coverage: 0,
+    coverage: 100,
     assignee: '@tidoust'
   },
   'widl-MediaSource-endOfStream-void-EndOfStreamError-error': 100,
@@ -47,7 +47,7 @@ var coverage = {
     assignee: '@tidoust'
   },
   'widl-MediaSource-setLiveSeekableRange-void-double-start-double-end': {
-    coverage: 0,
+    coverage: 100,
     assignee: '@tidoust'
   },
   'active-source-buffer-changes': {
@@ -297,10 +297,9 @@ var coverage = {
   'widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index': 100,
   'widl-URL-createObjectURL-DOMString-MediaSource-mediaSource': 100,
   'htmlmediaelement-extensions': {
-    coverage: 40,
+    coverage: 95,
     comments: [
-      'No test for the seekable attribute',
-      'For buffered, tests seem to cover all steps but we may want to check more complex cases that create multiple ranges'
+      'For buffered, tests cover all steps but we may want to check more complex cases that create multiple ranges'
     ],
     assignee: '@tidoust'
   },
