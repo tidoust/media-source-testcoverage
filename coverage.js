@@ -1,10 +1,6 @@
 var coverage = {
   'widl-MediaSource-activeSourceBuffers': {
-    coverage: 50,
-    comments: [
-      'No real test that the active source buffers are the right ones',
-      'No test on the SourceBuffers order'
-    ],
+    coverage: 100,
     assignee: '@tidoust'
   },
   'widl-MediaSource-sourceBuffers': 100,
@@ -55,7 +51,7 @@ var coverage = {
     assignee: '@tidoust'
   },
   'active-source-buffer-changes': {
-    coverage: 0,
+    coverage: 100,
     assignee: '@tidoust'
   },
   'mediasource-attach': {

@@ -66,9 +66,8 @@
     <section>
       <h2>Remarks</h2>
       <p>
-        All occurrences of <code>InvalidAccessError</code> in existing test files should be replaced by <code>TypeError</code> (changed in the spec in February 2016). The table below assumes that this has already been fixed.
+        All occurrences of <code>InvalidAccessError</code> in existing test files should be replaced by <code>TypeError</code> (changed in the spec in February 2016). The table below assumes that this has already been fixed. See corresponding <a href="https://github.com/w3c/web-platform-tests/pull/3179">pull request</a> for progress.
       </p>
-      <p><strong>ACTION:</strong> @tidoust to update the tests accordingly.</p>
     </section>
 
     <section id='table'>
@@ -250,13 +249,27 @@ console.log(JSON.stringify(toc, null, 2));
       if (test.definedIn === 'chromium') {
         link = '<a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/' +
           test.url + '" target="media-source-testsuite-chromium"' +
-          (test.comment ? ' title="' + test.comment + '"' : '') + '>' +
+          (test.comments ? ' title="' +
+            (Array.isArray(test.comments) ? test.comments.join('\n') :
+              test.comments) +
+          '"' : '') + '>' +
           test.url + '</a> (chromium)';
+      }
+      else if (test.definedIn) {
+        link = '<a href="' + test.definedIn + '" target="media-source-testsuite-pr"' +
+          (test.comments ? ' title="' +
+            (Array.isArray(test.comments) ? test.comments.join('\n') :
+              test.comments) +
+          '"' : '') + '>' +
+          test.url + '</a> (PR)';
       }
       else {
         link = '<a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/' +
           test.url + '" target="media-source-testsuite"' +
-          (test.comment ? ' title="' + test.comment + '"' : '') + '>' +
+          (test.comments ? ' title="' +
+            (Array.isArray(test.comments) ? test.comments.join('\n') :
+              test.comments) +
+          '"' : '') + '>' +
           test.url + '</a>';
       }
       return link;

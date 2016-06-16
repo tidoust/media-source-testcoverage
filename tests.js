@@ -36,13 +36,13 @@ var tests = [
     url: 'mediasource-appendbuffer-quota-exceeded.html',
     checks: '#sourcebuffer-prepare-append',
     definedIn: 'chromium',
-    comment: 'checks step 6 for appendBuffer'
+    comments: 'checks step 6 for appendBuffer'
   },
   {
     url: 'mediasource-appendstream-quota-exceeded.html',
     checks: '#sourcebuffer-prepare-append',
     definedIn: 'chromium',
-    comment: 'checks step 6 for appendStream'
+    comments: 'checks step 6 for appendStream'
   },
   {
     url: 'mediasource-avtracks.html',
@@ -58,7 +58,7 @@ var tests = [
       '#sourcebuffer-buffer-append'
     ],
     definedIn: 'chromium',
-    comment: 'Check that media tracks and their properties are populated properly. Checks visible outcomes of SourceBuffer algorithms (e.g. 3.5.1, 3.5.12), removeSourceBuffer (2.2), detach from a media element (2.4.2)'
+    comments: 'Check that media tracks and their properties are populated properly. Checks visible outcomes of SourceBuffer algorithms (e.g. 3.5.1, 3.5.12), removeSourceBuffer (2.2), detach from a media element (2.4.2)'
   },
   {
     url: 'mediasource-detach.html',
@@ -122,7 +122,7 @@ var tests = [
       '#widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID'
     ],
     definedIn: 'chromium',
-    comment: 'Test needs to be updated to check getKinds instead of kinds which no longer exists'
+    comments: 'Test needs to be updated to check getKinds instead of kinds which no longer exists'
   },
   {
     url: 'mediasource-trackdefaultlist.html',
@@ -184,7 +184,7 @@ var tests = [
       '#end-of-stream-algorithm',
       '#widl-SourceBuffer-abort-void'
     ],
-    comment: 'checks closed clauses in various algorithms'
+    comments: 'checks closed clauses in various algorithms'
   },
   {
     url: 'mediasource-config-changes.js',
@@ -209,7 +209,7 @@ var tests = [
       '#widl-MediaSource-duration',
       '#duration-change-algorithm'
     ],
-    comment: 'may go too far, as it also tests MediaElement events'
+    comments: 'may go too far, as it also tests MediaElement events'
   },
   {
     url: 'mediasource-endofstream-invaliderror.html',
@@ -232,22 +232,22 @@ var tests = [
   {
     url: 'mediasource-is-type-supported.html',
     checks: '#widl-MediaSource-isTypeSupported-boolean-DOMString-type',
-    comment: '(specific to Chrome, though)'
+    comments: '(specific to Chrome, though)'
   },
   {
     url: 'mediasource-multiple-attach.html',
     checks: '#mediasource-attach',
-    comment: 'checks first condition of attaching to a media element (readyState not closed)'
+    comments: 'checks first condition of attaching to a media element (readyState not closed)'
   },
   {
     url: 'mediasource-play-then-seek-back.html',
     checks: '#mediasource-seeking',
-    comment: 'checks seeking back to start position'
+    comments: 'checks seeking back to start position'
   },
   {
     url: 'mediasource-play.html',
     checks: [],
-    comment: 'checks regular playback, not sure how to relate that to spec algorithms though'
+    comments: 'checks regular playback, not sure how to relate that to spec algorithms though'
   },
   {
     url: 'mediasource-preload.html',
@@ -256,7 +256,7 @@ var tests = [
   {
     url: 'mediasource-redundant-seek.html',
     checks: '#mediasource-seeking',
-    comment: 'but the test does not cover spec assertions AFAICT'
+    comments: 'but the test does not cover spec assertions AFAICT'
   },
   {
     url: 'mediasource-remove.html',
@@ -272,12 +272,12 @@ var tests = [
   {
     url: 'mediasource-seek-beyond-duration.html',
     checks: '#mediasource-seeking',
-    comment: 'but the test does not cover spec assertions AFAICT'
+    comments: 'but the test does not cover spec assertions AFAICT'
   },
   {
     url: 'mediasource-seek-during-pending-seek.html',
     checks: '#mediasource-seeking',
-    comment: 'but the test does not cover spec assertions AFAICT'
+    comments: 'but the test does not cover spec assertions AFAICT'
   },
   {
     url: 'mediasource-sequencemode-append-buffer.html',
@@ -303,10 +303,23 @@ var tests = [
       '#mediasource-detach',
       '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
     ],
-    comment: 'checks various checks on sourceBuffers list'
+    comments: 'checks various checks on sourceBuffers list'
   },
   {
     url: 'mediasource-timestamp-offset.html',
     checks: '#widl-SourceBuffer-timestampOffset'
+  },
+  {
+    url: 'mediasource-activeSourceBuffers.html',
+    checks: [
+      '#widl-MediaSource-activeSourceBuffers',
+      '#active-source-buffer-changes'
+    ],
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3182',
+    comments: [
+      'Checks that the active source buffers are the right ones',
+      'Checks the order of active SourceBuffers',
+      'Checks changes to selected/enabled track state'
+    ],
   }
 ];
