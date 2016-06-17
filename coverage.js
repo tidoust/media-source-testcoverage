@@ -37,9 +37,8 @@ var coverage = {
     assignee: '@tidoust'
   },
   'widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer': {
-    coverage: 80,
+    coverage: 90,
     comments: [
-      'No test for step 2 (e.g. for abort and updateend events)',
       'No test on TextTrackList (steps 7, 8)',
       'Tests on audio/video tracks (e.g. removetrack events) in mediastream-avtracks.html',
       'Step 11 (Destroy all resources for sourceBuffer) is somewhat meaningless'

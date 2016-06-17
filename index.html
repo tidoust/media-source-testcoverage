@@ -64,10 +64,14 @@
     </section>
 
     <section>
-      <h2>Remarks</h2>
-      <p>
-        All occurrences of <code>InvalidAccessError</code> in existing test files should be replaced by <code>TypeError</code> (changed in the spec in February 2016). The table below assumes that this has already been fixed. See corresponding <a href="https://github.com/w3c/web-platform-tests/pull/3179">pull request</a> for progress.
-      </p>
+      <h2>TODO</h2>
+      <ul>
+        <li>Import missing tests from Chromium</li>
+        <li>Occurrences of <code>InvalidAccessError</code> in existing test files should be replaced by <code>TypeError</code> (changed in the spec in February 2016). The table below assumes that this has already been fixed. Done in <a href="https://github.com/w3c/web-platform-tests/pull/3179">PR3179</a>.</li>
+        <li>Tests that assume support for a particular codec should be re-written in a codec-agnostic way. This includes tests for <code>isTypeSupported</code> but also tests in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-addsourcebuffer.html">mediasource-addsourcebuffer.html</a> for instance.</li>
+        <li>Edge throws an <code>InvalidAccessError</code> when passed <code>null</code> as method argument. Test in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-removesourcebuffer.html">mediasource-removesourcebuffer.html</a> rather expects a <code>TypeError</code>, which other browsers seem to throw. Who is right?</li>
+        <li>Think about "optional" tests, typically tests that check advanced configurations or require support for a particular codec. This includes tests on <code>TextTrack</code>, as well as tests on <em>generate timestamp flag</em>. How can such tests ("if supported then test") be written with testharness?</li>
+      </ul>
     </section>
 
     <section id='table'>

@@ -64,12 +64,9 @@ var tests = [
     url: 'mediasource-detach.html',
     checks: [
       '#mediasource-detach',
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-activeSourceBuffers',
       '#widl-MediaSource-readyState',
       '#widl-MediaSource-duration',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
-      '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer'
+      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
     ],
     definedIn: 'chromium'
   },
@@ -267,7 +264,9 @@ var tests = [
   },
   {
     url: 'mediasource-removesourcebuffer.html',
-    checks: '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer'
+    checks: '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3187',
+    comments: 'Completed to cover step 2 (abort and updateend events)'
   },
   {
     url: 'mediasource-seek-beyond-duration.html',
