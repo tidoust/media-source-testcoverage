@@ -54,10 +54,9 @@ var coverage = {
     assignee: '@tidoust'
   },
   'mediasource-attach': {
-    coverage: 70,
+    coverage: 95,
     comments: [
-      'Test on step 1 in PR3082: https://github.com/w3c/web-platform-tests/pull/3082',
-      'No test on not e.g. firing suspend event (step 4.3)',
+      'No real test on step 4 but see issue 99: https://github.com/w3c/media-source/issues/99',
       'Basically all tests in the test suite use the sourceopen event fired at step 3'
     ],
     assignee: '@tidoust'

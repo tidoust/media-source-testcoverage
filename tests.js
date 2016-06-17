@@ -333,5 +333,10 @@ var tests = [
       'Checks the setLiveSeekableRange/clearLiveSeekableRange methods',
       'Checks the impact on HTMLMediaElement.seekable'
     ],
+  },
+  {
+    url: 'mediasource-attach-stops-delaying-load-event.html',
+    checks: '#mediasource-attach',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3082'
   }
 ];
