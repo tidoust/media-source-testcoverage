@@ -224,35 +224,34 @@
         },
         "HTMLVideoElement interface: operation getVideoPlaybackQuality()": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "AudioTrack interface: attribute sourceBuffer": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "VideoTrack interface: attribute sourceBuffer": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "TextTrack interface: attribute sourceBuffer": {
@@ -811,24 +810,24 @@
         },
         "SourceBuffer interface: attribute audioTracks": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: attribute videoTracks": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: attribute textTracks": {
@@ -937,12 +936,13 @@
         },
         "SourceBuffer interface: operation appendStream(ReadableStream,unsigned long long)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "SourceBuffer interface: operation abort()": {
@@ -968,12 +968,13 @@
         },
         "SourceBuffer interface: attribute trackDefaults": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "SourceBuffer must be primary interface of sourceBuffer": {
@@ -1178,24 +1179,24 @@
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"appendStream\" with the proper type (16)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: calling appendStream(ReadableStream,unsigned long long) on sourceBuffer with too few arguments must throw TypeError": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (17)": {
@@ -1230,12 +1231,13 @@
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"trackDefaults\" with the proper type (19)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)": {
@@ -1497,35 +1499,33 @@
         },
         "VideoPlaybackQuality interface: existence and properties of interface object": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface object length": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "VideoPlaybackQuality interface object name": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: existence and properties of interface prototype object": {
@@ -1541,57 +1541,52 @@
         },
         "VideoPlaybackQuality interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: attribute creationTime": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: attribute totalVideoFrames": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: attribute droppedVideoFrames": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: attribute corruptedVideoFrames": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: attribute totalFrameDelay": {
@@ -1607,68 +1602,62 @@
         },
         "VideoPlaybackQuality must be primary interface of video.getVideoPlaybackQuality()": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Stringification of video.getVideoPlaybackQuality()": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"creationTime\" with the proper type (0)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalVideoFrames\" with the proper type (1)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"droppedVideoFrames\" with the proper type (2)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"corruptedVideoFrames\" with the proper type (3)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "PASS",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalFrameDelay\" with the proper type (4)": {
@@ -1684,32 +1673,35 @@
         },
         "TrackDefault interface: existence and properties of interface object": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface object length": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface object name": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: existence and properties of interface prototype object": {
@@ -1724,52 +1716,57 @@
         },
         "TrackDefault interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: attribute type": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: attribute byteStreamTrackID": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: attribute language": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: attribute label": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefault interface: operation getKinds()": {
@@ -1784,32 +1781,35 @@
         },
         "TrackDefaultList interface: existence and properties of interface object": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList interface object length": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList interface object name": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList interface: existence and properties of interface prototype object": {
@@ -1824,65 +1824,70 @@
         },
         "TrackDefaultList interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList interface: attribute length": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList must be primary interface of sourceBuffer.trackDefaults": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "Stringification of sourceBuffer.trackDefaults": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "TrackDefaultList interface: sourceBuffer.trackDefaults must inherit property \"length\" with the proper type (0)": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         }
       }
     },
     "/media-source/mediasource-activesourcebuffers.html": {
       "byUA": {
-        "CH53": "OK",
+        "CH53": "TIMEOUT",
         "ED14": "TIMEOUT",
         "FF49": "OK"
       },
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 1
+        "TIMEOUT": 2,
+        "OK": 1
       },
       "subtests": {
         "SourceBuffer added to activeSourceBuffers list when its only audio track gets loaded (and thus becomes enabled).": {
@@ -1917,24 +1922,26 @@
         },
         "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "TIMEOUT",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "TIMEOUT": 1,
+            "PASS": 1,
+            "FAIL": 1
           }
         },
         "Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "TIMEOUT",
             "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "TIMEOUT": 1,
+            "PASS": 1,
+            "FAIL": 1
           }
         }
       }
@@ -1946,7 +1953,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -1957,7 +1964,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() with empty type": {
@@ -1967,7 +1974,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test addSourceBuffer() with null": {
@@ -1977,7 +1984,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -1988,7 +1995,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() with Vorbis and VP8": {
@@ -1998,7 +2005,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2009,7 +2016,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2020,7 +2027,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() audio only": {
@@ -2030,7 +2037,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() with AAC and H.264": {
@@ -2040,7 +2047,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() with AAC and H.264 in separate SourceBuffers": {
@@ -2050,7 +2057,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test addSourceBuffer() QuotaExceededError.": {
@@ -2060,7 +2067,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         }
       }
@@ -2072,7 +2079,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -2083,7 +2090,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test SourceBuffer.appendBuffer() call during a pending appendBuffer().": {
@@ -2093,7 +2100,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test SourceBuffer.abort() call during a pending appendBuffer().": {
@@ -2103,7 +2110,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test SourceBuffer.appendBuffer() triggering an 'ended' to 'open' transition.": {
@@ -2113,7 +2120,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test zero byte SourceBuffer.appendBuffer() call triggering an 'ended' to 'open' transition.": {
@@ -2123,7 +2130,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test MediaSource.removeSourceBuffer() call during a pending appendBuffer().": {
@@ -2133,7 +2140,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2144,7 +2151,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test MediaSource.endOfStream() during a pending appendBuffer() for one of its SourceBuffers.": {
@@ -2154,7 +2161,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test set SourceBuffer.timestampOffset during a pending appendBuffer().": {
@@ -2164,7 +2171,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appending an empty ArrayBufferView.": {
@@ -2174,7 +2181,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appending a neutered ArrayBufferView.": {
@@ -2184,7 +2191,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appending an empty ArrayBuffer.": {
@@ -2194,7 +2201,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appending a neutered ArrayBuffer.": {
@@ -2204,7 +2211,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appendBuffer with partial init segments.": {
@@ -2214,7 +2221,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "TIMEOUT": 1
           }
         },
@@ -2225,7 +2232,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "TIMEOUT": 1
           }
         },
@@ -2236,7 +2243,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "TIMEOUT": 1
           }
         },
@@ -2247,7 +2254,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2258,7 +2265,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test abort after appendBuffer update ends.": {
@@ -2268,7 +2275,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appending null.": {
@@ -2278,7 +2285,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2289,7 +2296,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -2302,7 +2309,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -2313,7 +2320,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test set wrong values to appendWindowStart and appendWindowEnd.": {
@@ -2323,7 +2330,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test set correct values to appendWindowStart and appendWindowEnd.": {
@@ -2333,7 +2340,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appendwindow throw error when mediasource object is not associated with a sourebuffer.": {
@@ -2343,7 +2350,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -2354,7 +2361,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test appendWindowStart and appendWindowEnd value after a sourceBuffer.abort().": {
@@ -2364,7 +2371,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test read appendWindowStart and appendWindowEnd initial values.": {
@@ -2374,7 +2381,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         }
       }
@@ -2917,7 +2924,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -2928,7 +2935,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to 1": {
@@ -2938,7 +2945,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to Number.MAX_VALUE": {
@@ -2948,7 +2955,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to Number.MIN_VALUE": {
@@ -2958,7 +2965,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to Number.MAX_VALUE - 1": {
@@ -2968,7 +2975,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to Number.MIN_VALUE - 1": {
@@ -2978,7 +2985,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Set duration to Number.POSITIVE_INFINITY": {
@@ -2988,7 +2995,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to Number.NEGATIVE_INFINITY": {
@@ -2998,7 +3005,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Set duration to lowest value.": {
@@ -3008,7 +3015,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Set duration to a negative double.": {
@@ -3018,7 +3025,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Set duration to a positive double.": {
@@ -3028,7 +3035,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to zero": {
@@ -3038,7 +3045,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Set duration to NaN": {
@@ -3048,7 +3055,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         }
       }
@@ -3167,13 +3174,13 @@
       "subtests": {
         "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF49": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -3881,7 +3888,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -3892,7 +3899,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test remove with non-finite start.": {
@@ -3902,7 +3909,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -3913,7 +3920,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test remove with a start larger than the end.": {
@@ -3923,7 +3930,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test remove with a NEGATIVE_INFINITY end.": {
@@ -3933,7 +3940,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test remove with a NaN end.": {
@@ -3943,7 +3950,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test remove after SourceBuffer removed from mediaSource.": {
@@ -3953,7 +3960,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -3964,7 +3971,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -3975,7 +3982,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -3986,7 +3993,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test remove transitioning readyState from 'ended' to 'open'.": {
@@ -3996,7 +4003,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test removing all appended data.": {
@@ -4006,7 +4013,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
+            "FAIL": 2,
             "PASS": 1
           }
         },
@@ -4017,7 +4024,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test removing the middle of appended data.": {
@@ -4027,7 +4034,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         },
         "Test removing the end of appended data.": {
@@ -4037,7 +4044,7 @@
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 3
           }
         }
       }
@@ -4049,7 +4056,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -4060,7 +4067,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4071,7 +4078,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4082,7 +4089,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4093,7 +4100,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4104,7 +4111,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test abort event when removeSourceBuffer() called while SourceBuffer is updating": {
@@ -4114,7 +4121,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -4350,7 +4357,7 @@
         "FF49": "OK"
       },
       "totals": {
-        "OK": 3,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -4361,7 +4368,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to a negative number.": {
@@ -4371,7 +4378,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to zero.": {
@@ -4381,7 +4388,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to positive infinity.": {
@@ -4391,7 +4398,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4402,7 +4409,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4413,7 +4420,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4424,7 +4431,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         },
@@ -4435,7 +4442,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to false.": {
@@ -4445,7 +4452,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to true.": {
@@ -4455,7 +4462,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to a number string.": {
@@ -4465,7 +4472,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting SourceBuffer.timestampOffset to an empty string.": {
@@ -4475,7 +4482,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting timestampOffset in 'ended' state causes a transition to 'open'.": {
@@ -4485,7 +4492,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test getting the initial value of timestampOffset.": {
@@ -4495,7 +4502,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3
           }
         },
         "Test setting timestampoffset after removing the sourcebuffer.": {
@@ -4505,7 +4512,7 @@
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3,
+            "PASS": 2,
             "FAIL": 1
           }
         }

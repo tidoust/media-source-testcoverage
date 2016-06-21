@@ -11,9 +11,9 @@
       <header>
         <h1>Media Source Extensions: Complete Failures</h1>
       </header>
-      <p><strong>Completely failed files</strong>: 16; <strong>Completely failed subtests</strong>: 78; <strong>Failure level</strong>: 78/382 (20.42%)</p>
+      <p><strong>Completely failed files</strong>: 15; <strong>Completely failed subtests</strong>: 59; <strong>Failure level</strong>: 59/382 (15.45%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/media-source/interfaces.html</a> <small>(52/161, 32.30%, 13.61% of total)</small></li>
+<ol class='toc'><li><a href='#test-file-0'>/media-source/interfaces.html</a> <small>(33/161, 20.50%, 8.64% of total)</small></li>
 <li><a href='#test-file-1'>/media-source/mediasource-addsourcebuffer.html</a> <small>(1/11, 9.09%, 0.26% of total)</small></li>
 <li><a href='#test-file-2'>/media-source/mediasource-appendwindow.html</a> <small>(1/7, 14.29%, 0.26% of total)</small></li>
 <li><a href='#test-file-3'>/media-source/mediasource-duration-boundaryconditions.html</a> <small>(5/13, 38.46%, 1.31% of total)</small></li>
@@ -23,7 +23,7 @@
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test</th><th>CH53</th><th>ED14</th><th>FF49</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/media-source/interfaces.html' target='_blank'>/media-source/interfaces.html</a> <small>(52/161, 32.30%, 13.61% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/media-source/interfaces.html' target='_blank'>/media-source/interfaces.html</a> <small>(33/161, 20.50%, 8.64% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>TextTrack interface: attribute sourceBuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>MediaSource interface: attribute onsourceopen</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>MediaSource interface: attribute onsourceended</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -42,8 +42,6 @@
 <tr class='subtest'><td>SourceBuffer interface: attribute onupdateend</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: attribute onerror</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: attribute onabort</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>SourceBuffer interface: operation appendStream(ReadableStream,unsigned long long)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>SourceBuffer interface: attribute trackDefaults</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "audioTracks" with the proper type (4)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "videoTracks" with the proper type (5)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "textTracks" with the proper type (6)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -52,30 +50,13 @@
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "onupdateend" with the proper type (11)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "onerror" with the proper type (12)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "onabort" with the proper type (13)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>SourceBuffer interface: sourceBuffer must inherit property "trackDefaults" with the proper type (19)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBufferList interface: attribute onaddsourcebuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBufferList interface: attribute onremovesourcebuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBufferList interface: mediaSource.sourceBuffers must inherit property "onaddsourcebuffer" with the proper type (1)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>SourceBufferList interface: mediaSource.sourceBuffers must inherit property "onremovesourcebuffer" with the proper type (2)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: existence and properties of interface object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface object length</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface object name</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>TrackDefault interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: existence and properties of interface prototype object's "constructor" property</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: attribute type</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: attribute byteStreamTrackID</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: attribute language</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefault interface: attribute label</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>TrackDefault interface: operation getKinds()</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface: existence and properties of interface object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface object length</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface object name</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>TrackDefaultList interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface: existence and properties of interface prototype object's "constructor" property</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface: attribute length</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList must be primary interface of sourceBuffer.trackDefaults</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Stringification of sourceBuffer.trackDefaults</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>TrackDefaultList interface: sourceBuffer.trackDefaults must inherit property "length" with the proper type (0)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/media-source/mediasource-addsourcebuffer.html' target='_blank'>/media-source/mediasource-addsourcebuffer.html</a> <small>(1/11, 9.09%, 0.26% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test addSourceBuffer() with empty type</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/media-source/mediasource-appendwindow.html' target='_blank'>/media-source/mediasource-appendwindow.html</a> <small>(1/7, 14.29%, 0.26% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
