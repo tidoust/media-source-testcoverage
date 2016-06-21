@@ -90,9 +90,9 @@ var coverage = {
     assignee: '@tidoust'
   },
   'end-of-stream-algorithm': {
-    coverage: 80,
+    coverage: 90,
     comments: [
-      'No test for step 3',
+      'Test on duration change in step 3 should be added',
       'Most checks in mediasource-errors.html'
     ],
     assignee: '@tidoust'
@@ -106,9 +106,9 @@ var coverage = {
     assignee: '@plehegar'
   },
   'widl-SourceBuffer-mode': {
-    coverage: 80,
+    coverage: 90,
     comments: [
-      'No test for step 4 on generate timestamps flag (but this requires audio/mpeg audio/aac support)',
+      'Test for step 4 in PR3205',
       'No test for step 7 on groups start/end timestamps (but hard to test)'
     ],
     assignee: '@plehegar'
@@ -159,10 +159,10 @@ var coverage = {
   },
   'widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize': 0,
   'widl-SourceBuffer-remove-void-double-start-unrestricted-double-end': {
-    coverage: 90,
+    coverage: 100,
     comments: [
-      'No test for step 3 (duration equals NaN)',
-      'No test for step 6.2'
+      'Test for step 3 (duration equals NaN) in PR3206',
+      'Test for step 6.2 in PR3207'
     ],
     assignee: '@plehegar'
   },

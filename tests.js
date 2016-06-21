@@ -338,5 +338,10 @@ var tests = [
     url: 'mediasource-attach-stops-delaying-load-event.html',
     checks: '#mediasource-attach',
     definedIn: 'https://github.com/w3c/web-platform-tests/pull/3082'
+  },
+  {
+    url: 'mediasource-sourcebuffer-mode-timestamps.html',
+    checks: '#widl-SourceBuffer-mode',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3205'
   }
 ];

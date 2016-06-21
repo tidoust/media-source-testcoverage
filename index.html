@@ -86,12 +86,10 @@
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3182">#3182</a> Checks MediaSource.activeSourceBuffers and changes to track state</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3184">#3184</a> Checks live seekable range and HTMLMediaElement.seekable</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3187">#3187</a> Completed MediaSource.removeSourceBuffer tests</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3205">#3205</a> SourceBuffer.mode with generate timestamps flag true</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3206">#3206</a> Check TypeError for sourceBuffer.remove()</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3207">#3207</a> step 6.2. Queue a task to fire a simple event named sourceopen at the media source parent</li>
         </ul></li>
-        <li><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec, such as <code>isTypeSupported</code> but also tests in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-addsourcebuffer.html">mediasource-addsourcebuffer.html</a> for instance.</li>
-        <li><strong>@tidoust</strong> to find out how to write conditional/optional tests, in other words tests that check non-mandatory advanced configuration or specific codec support. This includes tests on <code>TextTrack</code>, as well as tests on <em>generate timestamp flag</em>.</li>
-        <li><strong>@tidoust</strong> to write missing tests mainly for <code>MediaSource</code> and <code>VideoPlaybackQuality</code>, see table below</li>
-        <li><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</li>
-        <li><strong>@tidoust</strong> to generate test results when test suite and implementations are updated</li>
         <li><strong><em>Everyone</em></strong> to agree to discard (or merge) old pull requests:
         <ul>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/823">#823</a> Tests for Section 2. MediaSource Object API in Media Source Extensions.</li>
@@ -99,6 +97,15 @@
           <li><a href="https://github.com/w3c/web-platform-tests/pull/954">#954</a> Unit tests for SourceBuffer#appendStream function</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/1405">#1405</a> Proposed improvments to isTypeSupported tests</li>
         </ul></li>
+        <li><strong>@tidoust</strong> to add a test case for <code>MediaSource.addSourceBuffer()</code> that sets the <em>generate timestamps flag</em></li>
+        <li><strong>@tidoust</strong> to add a test case for step 2 of <em>Duration change</em></li>
+        <li><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em></li>
+        <li><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code></li>
+        <li><strong>@tidoust</strong> to add missing test cases for <code>VideoPlaybackQuality</code></li>
+        <li><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec for no particular reason, such as <code>isTypeSupported</code> but also tests in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-addsourcebuffer.html">mediasource-addsourcebuffer.html</a> for instance</li>
+        <li><strong>@tidoust</strong> to review algorithms and consider additional corner case tests</li>
+        <li><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</li>
+        <li><strong>@tidoust</strong> to generate test results when test suite and implementations are updated</li>
       </ul>
     </section>
 
