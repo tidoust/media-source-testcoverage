@@ -502,13 +502,13 @@
         },
         {
           "name": "SourceBuffer interface: sourceBuffer must inherit property \"audioTracks\" with the proper type (4)",
-          "status": "FAIL",
-          "message": "Unrecognized type AudioTrackList"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "SourceBuffer interface: sourceBuffer must inherit property \"videoTracks\" with the proper type (5)",
-          "status": "FAIL",
-          "message": "Unrecognized type VideoTrackList"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "SourceBuffer interface: sourceBuffer must inherit property \"textTracks\" with the proper type (6)",

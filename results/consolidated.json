@@ -1039,22 +1039,24 @@
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"audioTracks\" with the proper type (4)": {
           "byUA": {
-            "CH53": "FAIL",
-            "ED14": "FAIL",
+            "CH53": "PASS",
+            "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"videoTracks\" with the proper type (5)": {
           "byUA": {
-            "CH53": "FAIL",
-            "ED14": "FAIL",
+            "CH53": "PASS",
+            "ED14": "PASS",
             "FF49": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"textTracks\" with the proper type (6)": {
@@ -1913,11 +1915,12 @@
         "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.": {
           "byUA": {
             "CH53": "PASS",
-            "ED14": "PASS",
+            "ED14": "FAIL",
             "FF49": "PASS"
           },
           "totals": {
-            "PASS": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.": {
