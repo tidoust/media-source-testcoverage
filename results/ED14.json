@@ -924,8 +924,8 @@
         },
         {
           "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.",
-          "status": "FAIL",
-          "message": "assert_equals: first active SourceBuffer is the audio one expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.",
@@ -1943,6 +1943,11 @@
           "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
         },
         {
+          "name": "Test remove with a NaN duration.",
+          "status": "FAIL",
+          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, 0);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
           "name": "Test remove while update pending.",
           "status": "FAIL",
           "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(3, 4);\r\n              }\" did not throw"
@@ -2074,6 +2079,23 @@
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
           "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.253"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
+      "subtests": [
+        {
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\r\n                              sourceBuffer.mode = \"segments\";\r\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"InvalidStateError\")"
+        },
+        {
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code"
         }
       ],
       "status": "TIMEOUT",

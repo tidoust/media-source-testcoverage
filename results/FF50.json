@@ -1943,6 +1943,11 @@
           "message": null
         },
         {
+          "name": "Test remove with a NaN duration.",
+          "status": "FAIL",
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, 0);\n              }\" threw object \"InvalidAccessError: A parameter or an operation is not supported by the underlying object\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
           "name": "Test remove while update pending.",
           "status": "PASS",
           "message": null

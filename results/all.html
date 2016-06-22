@@ -11,7 +11,7 @@
       <header>
         <h1>Media Source Extensions: All Results</h1>
       </header>
-      <p><strong>Test files</strong>: 47; <strong>Total subtests</strong>: 382</p>
+      <p><strong>Test files</strong>: 48; <strong>Total subtests</strong>: 385</p>
       <h3>Test Files</h3>
 <ol class='toc'><li><a href='#test-file-0'>/media-source/SourceBuffer-abort-removed.html</a></li>
 <li><a href='#test-file-1'>/media-source/SourceBuffer-abort-updating.html</a></li>
@@ -55,11 +55,12 @@
 <li><a href='#test-file-39'>/media-source/mediasource-seek-beyond-duration.html</a></li>
 <li><a href='#test-file-40'>/media-source/mediasource-seek-during-pending-seek.html</a></li>
 <li><a href='#test-file-41'>/media-source/mediasource-sequencemode-append-buffer.html</a></li>
-<li><a href='#test-file-42'>/media-source/mediasource-sourcebuffer-mode.html</a></li>
-<li><a href='#test-file-43'>/media-source/mediasource-sourcebufferlist.html</a></li>
-<li><a href='#test-file-44'>/media-source/mediasource-timestamp-offset.html</a></li>
-<li><a href='#test-file-45'>/media-source/SourceBuffer-abort-readyState.html</a></li>
-<li><a href='#test-file-46'>/media-source/mediasource-redundant-seek.html</a></li>
+<li><a href='#test-file-42'>/media-source/mediasource-sourcebuffer-mode-timestamps.html</a></li>
+<li><a href='#test-file-43'>/media-source/mediasource-sourcebuffer-mode.html</a></li>
+<li><a href='#test-file-44'>/media-source/mediasource-sourcebufferlist.html</a></li>
+<li><a href='#test-file-45'>/media-source/mediasource-timestamp-offset.html</a></li>
+<li><a href='#test-file-46'>/media-source/SourceBuffer-abort-readyState.html</a></li>
+<li><a href='#test-file-47'>/media-source/mediasource-redundant-seek.html</a></li>
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test</th><th>CH53</th><th>ED14</th><th>FF50</th></tr></thead>
@@ -245,7 +246,7 @@
 <tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/media-source/mediasource-activesourcebuffers.html' target='_blank'>/media-source/mediasource-activesourcebuffers.html</a></td><td class='TIMEOUT'>TIMEOUT</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>SourceBuffer added to activeSourceBuffers list when its only audio track gets loaded (and thus becomes enabled).</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>SourceBuffer added to activeSourceBuffers list when its only video track gets loaded (and thus becomes selected).</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.</td><td class='TIMEOUT'>TIMEOUT</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.</td><td class='TIMEOUT'>TIMEOUT</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/media-source/mediasource-addsourcebuffer.html' target='_blank'>/media-source/mediasource-addsourcebuffer.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
@@ -436,14 +437,15 @@
 <tr class='subtest'><td>Test remove with a NEGATIVE_INFINITY end.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove with a NaN end.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove after SourceBuffer removed from mediaSource.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Test remove with a NaN duration.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove while update pending.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test aborting a remove operation.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test remove with a start at the duration.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test remove transitioning readyState from 'ended' to 'open'.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test removing all appended data.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test removing beginning of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Test removing the middle of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Test removing the end of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test removing the middle of appended data.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test removing the end of appended data.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-38'><td><a href='http://www.w3c-test.org/media-source/mediasource-removesourcebuffer.html' target='_blank'>/media-source/mediasource-removesourcebuffer.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test addSourceBuffer(), removeSourceBuffer(), addSourceBuffer() sequence.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test removeSourceBuffer() with null</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
@@ -461,17 +463,20 @@
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(first media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(second media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(second media segment, then first media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-42'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebuffer-mode.html' target='_blank'>/media-source/mediasource-sourcebuffer-mode.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-42'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebuffer-mode-timestamps.html' target='_blank'>/media-source/mediasource-sourcebuffer-mode-timestamps.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>audio/aac : If generate timestamps flag equals true and new mode equals "segments", then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>audio/mpeg : If generate timestamps flag equals true and new mode equals "segments", then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr class='test' id='test-file-43'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebuffer-mode.html' target='_blank'>/media-source/mediasource-sourcebuffer-mode.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test initial value of SourceBuffer.mode is "segments"</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.mode</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting a removed SourceBuffer's mode</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.mode while still updating</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.mode triggers parent MediaSource 'ended' to 'open' transition.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.mode and SourceBuffer.timestampOffset while parsing media segment.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='test' id='test-file-43'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebufferlist.html' target='_blank'>/media-source/mediasource-sourcebufferlist.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-44'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebufferlist.html' target='_blank'>/media-source/mediasource-sourcebufferlist.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test SourceBufferList event dispatching.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='test' id='test-file-44'><td><a href='http://www.w3c-test.org/media-source/mediasource-timestamp-offset.html' target='_blank'>/media-source/mediasource-timestamp-offset.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-45'><td><a href='http://www.w3c-test.org/media-source/mediasource-timestamp-offset.html' target='_blank'>/media-source/mediasource-timestamp-offset.html</a></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.timestampOffset to a positive number.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.timestampOffset to a negative number.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting SourceBuffer.timestampOffset to zero.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -487,10 +492,10 @@
 <tr class='subtest'><td>Test setting timestampOffset in 'ended' state causes a transition to 'open'.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test getting the initial value of timestampOffset.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Test setting timestampoffset after removing the sourcebuffer.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='test' id='test-file-45'><td><a href='http://www.w3c-test.org/media-source/SourceBuffer-abort-readyState.html' target='_blank'>/media-source/SourceBuffer-abort-readyState.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-46'><td><a href='http://www.w3c-test.org/media-source/SourceBuffer-abort-readyState.html' target='_blank'>/media-source/SourceBuffer-abort-readyState.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>SourceBuffer#abort() (video/webm; codecs="vorbis,vp8") : If the readyState attribute of the parent media source is not in the "open" state then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the "open" state then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='test' id='test-file-46'><td><a href='http://www.w3c-test.org/media-source/mediasource-redundant-seek.html' target='_blank'>/media-source/mediasource-redundant-seek.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-47'><td><a href='http://www.w3c-test.org/media-source/mediasource-redundant-seek.html' target='_blank'>/media-source/mediasource-redundant-seek.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test redundant fully prebuffered seek</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 
       </table>

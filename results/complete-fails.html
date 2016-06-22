@@ -11,19 +11,20 @@
       <header>
         <h1>Media Source Extensions: Complete Failures</h1>
       </header>
-      <p><strong>Completely failed files</strong>: 15; <strong>Completely failed subtests</strong>: 57; <strong>Failure level</strong>: 57/382 (14.92%)</p>
+      <p><strong>Completely failed files</strong>: 16; <strong>Completely failed subtests</strong>: 58; <strong>Failure level</strong>: 58/385 (15.06%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/media-source/interfaces.html</a> <small>(31/161, 19.25%, 8.12% of total)</small></li>
+<ol class='toc'><li><a href='#test-file-0'>/media-source/interfaces.html</a> <small>(31/161, 19.25%, 8.05% of total)</small></li>
 <li><a href='#test-file-1'>/media-source/mediasource-addsourcebuffer.html</a> <small>(1/11, 9.09%, 0.26% of total)</small></li>
 <li><a href='#test-file-2'>/media-source/mediasource-appendwindow.html</a> <small>(1/7, 14.29%, 0.26% of total)</small></li>
-<li><a href='#test-file-3'>/media-source/mediasource-duration-boundaryconditions.html</a> <small>(5/13, 38.46%, 1.31% of total)</small></li>
-<li><a href='#test-file-4'>/media-source/mediasource-liveseekable.html</a> <small>(8/10, 80.00%, 2.09% of total)</small></li>
-<li><a href='#test-file-5'>/media-source/mediasource-remove.html</a> <small>(8/15, 53.33%, 2.09% of total)</small></li>
-<li><a href='#test-file-6'>/media-source/mediasource-sequencemode-append-buffer.html</a> <small>(3/3, 100.00%, 0.79% of total)</small></li>
+<li><a href='#test-file-3'>/media-source/mediasource-duration-boundaryconditions.html</a> <small>(5/13, 38.46%, 1.30% of total)</small></li>
+<li><a href='#test-file-4'>/media-source/mediasource-liveseekable.html</a> <small>(8/10, 80.00%, 2.08% of total)</small></li>
+<li><a href='#test-file-5'>/media-source/mediasource-remove.html</a> <small>(7/16, 43.75%, 1.82% of total)</small></li>
+<li><a href='#test-file-6'>/media-source/mediasource-sequencemode-append-buffer.html</a> <small>(3/3, 100.00%, 0.78% of total)</small></li>
+<li><a href='#test-file-7'>/media-source/mediasource-sourcebuffer-mode-timestamps.html</a> <small>(2/2, 100.00%, 0.52% of total)</small></li>
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test</th><th>CH53</th><th>ED14</th><th>FF50</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/media-source/interfaces.html' target='_blank'>/media-source/interfaces.html</a> <small>(31/161, 19.25%, 8.12% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/media-source/interfaces.html' target='_blank'>/media-source/interfaces.html</a> <small>(31/161, 19.25%, 8.05% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>TextTrack interface: attribute sourceBuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>MediaSource interface: attribute onsourceopen</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>MediaSource interface: attribute onsourceended</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -59,13 +60,13 @@
 <tr class='subtest'><td>Test addSourceBuffer() with empty type</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/media-source/mediasource-appendwindow.html' target='_blank'>/media-source/mediasource-appendwindow.html</a> <small>(1/7, 14.29%, 0.26% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test set wrong values to appendWindowStart and appendWindowEnd.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/media-source/mediasource-duration-boundaryconditions.html' target='_blank'>/media-source/mediasource-duration-boundaryconditions.html</a> <small>(5/13, 38.46%, 1.31% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/media-source/mediasource-duration-boundaryconditions.html' target='_blank'>/media-source/mediasource-duration-boundaryconditions.html</a> <small>(5/13, 38.46%, 1.30% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Set duration to Number.MIN_VALUE - 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Set duration to Number.NEGATIVE_INFINITY</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Set duration to lowest value.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Set duration to a negative double.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Set duration to NaN</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/media-source/mediasource-liveseekable.html' target='_blank'>/media-source/mediasource-liveseekable.html</a> <small>(8/10, 80.00%, 2.09% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/media-source/mediasource-liveseekable.html' target='_blank'>/media-source/mediasource-liveseekable.html</a> <small>(8/10, 80.00%, 2.08% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>setLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>clearLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -74,19 +75,21 @@
 <tr class='subtest'><td>clearLiveSeekableRange returns with no error when conditions are correct</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>HTMLMediaElement.seekable returns the live seekable range or an empty range if that range was cleared when nothing is buffered</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>HTMLMediaElement.seekable returns the union of the buffered range and the live seekable range, when set</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/media-source/mediasource-remove.html' target='_blank'>/media-source/mediasource-remove.html</a> <small>(8/15, 53.33%, 2.09% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/media-source/mediasource-remove.html' target='_blank'>/media-source/mediasource-remove.html</a> <small>(7/16, 43.75%, 1.82% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test remove with an negative start.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove with a start beyond the duration.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove with a start larger than the end.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove with a NEGATIVE_INFINITY end.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test remove with a NaN end.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test remove with a NaN duration.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test removing beginning of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Test removing the middle of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Test removing the end of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/media-source/mediasource-sequencemode-append-buffer.html' target='_blank'>/media-source/mediasource-sequencemode-append-buffer.html</a> <small>(3/3, 100.00%, 0.79% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/media-source/mediasource-sequencemode-append-buffer.html' target='_blank'>/media-source/mediasource-sequencemode-append-buffer.html</a> <small>(3/3, 100.00%, 0.78% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(first media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(second media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Test sequence AppendMode appendBuffer(second media segment, then first media segment)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebuffer-mode-timestamps.html' target='_blank'>/media-source/mediasource-sourcebuffer-mode-timestamps.html</a> <small>(2/2, 100.00%, 0.52% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>audio/aac : If generate timestamps flag equals true and new mode equals "segments", then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>audio/mpeg : If generate timestamps flag equals true and new mode equals "segments", then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
 
       </table>
     </div>

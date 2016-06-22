@@ -1915,12 +1915,11 @@
         "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.": {
           "byUA": {
             "CH53": "PASS",
-            "ED14": "FAIL",
+            "ED14": "PASS",
             "FF50": "PASS"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "PASS": 3
           }
         },
         "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.": {
@@ -3967,6 +3966,16 @@
             "FAIL": 1
           }
         },
+        "Test remove with a NaN duration.": {
+          "byUA": {
+            "CH53": "FAIL",
+            "ED14": "FAIL",
+            "FF50": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3
+          }
+        },
         "Test remove while update pending.": {
           "byUA": {
             "CH53": "PASS",
@@ -4032,22 +4041,24 @@
         },
         "Test removing the middle of appended data.": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF50": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         },
         "Test removing the end of appended data.": {
           "byUA": {
-            "CH53": "FAIL",
+            "CH53": "PASS",
             "ED14": "FAIL",
             "FF50": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 1,
+            "FAIL": 2
           }
         }
       }
@@ -4242,6 +4253,36 @@
           },
           "totals": {
             "FAIL": 3
+          }
+        }
+      }
+    },
+    "/media-source/mediasource-sourcebuffer-mode-timestamps.html": {
+      "byUA": {
+        "CH53": "OK",
+        "ED14": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.": {
+          "byUA": {
+            "CH53": "FAIL",
+            "ED14": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.": {
+          "byUA": {
+            "CH53": "FAIL",
+            "ED14": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
           }
         }
       }

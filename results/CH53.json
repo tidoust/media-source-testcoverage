@@ -1910,7 +1910,7 @@
         {
           "name": "Test remove with an negative start.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(-1, 2);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The start provided (-1) is outside the range (0, 0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(-1, 2);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The start provided (-1) is outside the range (0, 10).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with non-finite start.",
@@ -1930,17 +1930,22 @@
         {
           "name": "Test remove with a NEGATIVE_INFINITY end.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The start provided (0) is outside the range (0, 0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The end value provided (-Infinity) must be greater than the start value provided (0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with a NaN end.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NaN);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The start provided (0) is outside the range (0, 0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NaN);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The end value provided (NaN) must be greater than the start value provided (0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove after SourceBuffer removed from mediaSource.",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "Test remove with a NaN duration.",
+          "status": "FAIL",
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, 0);\n              }\" threw object \"InvalidAccessError: Failed to execute 'remove' on 'SourceBuffer': The start provided (0) is outside the range (0, 0).\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove while update pending.",
@@ -1974,13 +1979,13 @@
         },
         {
           "name": "Test removing the middle of appended data.",
-          "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test removing the end of appended data.",
-          "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2074,6 +2079,23 @@
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
           "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.348"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
+      "subtests": [
+        {
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw"
+        },
+        {
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw"
         }
       ],
       "status": "OK",
