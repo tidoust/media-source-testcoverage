@@ -2045,13 +2045,13 @@
       "subtests": [
         {
           "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
-          "status": "FAIL",
-          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test seeking to a new location during a pending seek.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
