@@ -300,9 +300,11 @@ var tests = [
       '#widl-MediaSource-sourceBuffers',
       '#widl-MediaSource-activeSourceBuffers',
       '#mediasource-detach',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
+      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
+      '#widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index',
+      '#widl-SourceBufferList-length'
     ],
-    comments: 'checks various checks on sourceBuffers list'
+    comments: 'checks properties of sourceBuffers list'
   },
   {
     url: 'mediasource-timestamp-offset.html',
@@ -343,5 +345,15 @@ var tests = [
     url: 'mediasource-sourcebuffer-mode-timestamps.html',
     checks: '#widl-SourceBuffer-mode',
     definedIn: 'https://github.com/w3c/web-platform-tests/pull/3205'
+  },
+  {
+    url: 'mediasource-addsourcebuffer-mode.html',
+    checks: '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3224'
+  },
+  {
+    url: 'mediasource-duration-buffered.html',
+    checks: '#duration-change-algorithm',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3232'
   }
 ];

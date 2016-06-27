@@ -90,6 +90,11 @@
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3206">#3206</a> Check TypeError for sourceBuffer.remove()</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3207">#3207</a> step 6.2. Queue a task to fire a simple event named sourceopen at the media source parent</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/3215">#3215</a> Added AudioTrackList and VideoTrackList to known interfaces</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3223">#3223</a> Check on SourceBufferList getter added</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3224">#3224</a> Check that SourceBuffer.mode is correctly initialized</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3231">#3231</a> Additional boundary checks on VideoPlaybackQuality attributes</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3232">#3232</a> Media source duration change algorithm (step 2 in particular)</li>
+          <li><a href="https://github.com/w3c/web-platform-tests/pull/3233">#3233</a> New tests for the End of stream algorithm</li>
         </ul></li>
         <li><strong><em>Everyone</em></strong> to agree to discard (or merge) old pull requests:
         <ul>
@@ -98,11 +103,11 @@
           <li><a href="https://github.com/w3c/web-platform-tests/pull/954">#954</a> Unit tests for SourceBuffer#appendStream function</li>
           <li><a href="https://github.com/w3c/web-platform-tests/pull/1405">#1405</a> Proposed improvments to isTypeSupported tests</li>
         </ul></li>
-        <li><strong>@tidoust</strong> to add a test case for <code>MediaSource.addSourceBuffer()</code> that sets the <em>generate timestamps flag</em></li>
-        <li><strong>@tidoust</strong> to add a test case for step 2 of <em>Duration change</em></li>
-        <li><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em></li>
-        <li><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code></li>
-        <li><strong>@tidoust</strong> to add missing test cases for <code>VideoPlaybackQuality</code></li>
+        <li><del><strong>@tidoust</strong> to add a test case for <code>MediaSource.addSourceBuffer()</code> that sets the <em>generate timestamps flag</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3224">#3224</a>)</li>
+        <li><del><strong>@tidoust</strong> to add a test case for step 2 of <em>Duration change</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3232">#3232</a>)</li>
+        <li><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em> ⇐ is there a way to force a UA into this state?</li>
+        <li><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code> ⇐ pending test import from Chromium</li>
+        <li><del><strong>@tidoust</strong> to add missing test cases for <code>VideoPlaybackQuality</code></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3231">#3231</a>)</li>
         <li><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec for no particular reason, such as <code>isTypeSupported</code> but also tests in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-addsourcebuffer.html">mediasource-addsourcebuffer.html</a> for instance</li>
         <li><strong>@tidoust</strong> to review algorithms and consider additional corner case tests</li>
         <li><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</li>

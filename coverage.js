@@ -19,10 +19,10 @@ var coverage = {
   },
   'widl-MediaSource-readyState': 100,
   'widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type': {
-    coverage: 90,
+    coverage: 100,
     comments: [
-      'Test for step 1 in mediasource-addsourcebuffer incorrectly assumes InvalidAccessError instead of TypeError',
-      'No test on generate timestamps flag (but this requires audio/mpeg audio/aac support)'
+      'Test for step 1 needs update to TypeError (PR3179)',
+      'Test on generate timestamps flag in PR3224 (requires audio/mpeg or audio/aac support)'
     ],
     assignee: '@tidoust'
   },
@@ -82,17 +82,17 @@ var coverage = {
     assignee: '@tidoust'
   },
   'duration-change-algorithm': {
-    coverage: 80,
+    coverage: 90,
     comments: [
-      'No test for step 2 (less than the highest starting presentation timestamp',
+      'Test for step 2 in PR3232',
       'No test for step 5 (but hard to test)'
     ],
     assignee: '@tidoust'
   },
   'end-of-stream-algorithm': {
-    coverage: 90,
+    coverage: 100,
     comments: [
-      'Test on duration change in step 3 should be added',
+      'Test on duration change in step 3 in PR3233',
       'Most checks in mediasource-errors.html'
     ],
     assignee: '@tidoust'
@@ -235,9 +235,9 @@ var coverage = {
     comments: 'Typically covered by tests on activeSourceBuffers and sourceBuffers'
   },
   'widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index': {
-    coverage: 50,
+    coverage: 100,
     comments: [
-      'No test for step 1 (undefined)',
+      'Test for step 1 in PR3223',
       'Typically covered by tests on activeSourceBuffers and sourceBuffers'
     ],
     assignee: '@tidoust'
@@ -251,28 +251,34 @@ var coverage = {
     assignee: '@chcunningham'
   },
   'widl-VideoPlaybackQuality-corruptedVideoFrames': {
-    coverage: 50,
-    comments: 'No test that the counter actually does something',
+    coverage: 90,
+    comments: [
+      'Some tests in PR3231',
+      'Can we force corruptedVideoFrames to increase?'
+    ],
     assignee: '@tidoust'
   },
   'widl-VideoPlaybackQuality-creationTime': {
-    coverage: 50,
-    comments: 'No test that the counter actually returns something close to Performance.now()',
+    coverage: 100,
+    comments: 'Some tests in PR3231',
     assignee: '@tidoust'
   },
   'widl-VideoPlaybackQuality-droppedVideoFrames': {
-    coverage: 50,
-    comments: 'No test that the counter actually does something',
+    coverage: 90,
+    comments: [
+      'Some tests in PR3231',
+      'Can we force corruptedVideoFrames to increase?'
+    ],
     assignee: '@tidoust'
   },
   'widl-VideoPlaybackQuality-totalFrameDelay': {
-    coverage: 50,
-    comments: 'No test that the counter actually does something',
+    coverage: 100,
+    comments: 'Some tests in PR3231',
     assignee: '@tidoust'
   },
   'widl-VideoPlaybackQuality-totalVideoFrames': {
-    coverage: 50,
-    comments: 'No test that the counter actually does something',
+    coverage: 100,
+    comments: 'Tests in PR3231',
     assignee: '@tidoust'
   },
   'widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID': {
@@ -302,8 +308,11 @@ var coverage = {
     assignee: '@tidoust'
   },
   'widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality': {
-    coverage: 50,
-    comments: 'No test that the properties return meaningful values',
+    coverage: 90,
+    comments: [
+      'Additional boundary checks in PR3231',
+      'Can we force droppedVideoFrames and corruptedVideoFrames to increase?'
+    ],
     assignee: '@tidoust'
   },
   'widl-AudioTrack-sourceBuffer': 100,
