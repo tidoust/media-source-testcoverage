@@ -1116,6 +1116,18 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
+      "subtests": [
+        {
+          "name": "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-appendwindow.html",
       "subtests": [
         {
@@ -1152,6 +1164,33 @@
           "name": "Test read appendWindowStart and appendWindowEnd initial values.",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-avtracks.html",
+      "subtests": [
+        {
+          "name": "Check that media tracks and their properties are populated properly",
+          "status": "FAIL",
+          "message": "object is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when the SourceBuffer is removed from the MediaSource",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when the HTMLMediaElement.src is changed",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when HTMLMediaElement.load() is called",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
         }
       ],
       "status": "OK",
@@ -1261,8 +1300,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio-only bitrate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1273,8 +1312,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio bitrate changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1285,8 +1324,8 @@
       "subtests": [
         {
           "name": "Tests mp4 frame size changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1297,8 +1336,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video bitrate changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1309,8 +1348,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only bitrate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1321,8 +1360,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame rate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1333,8 +1372,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame size changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1345,8 +1384,8 @@
       "subtests": [
         {
           "name": "Tests webm audio-only bitrate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1357,8 +1396,8 @@
       "subtests": [
         {
           "name": "Tests webm audio bitrate changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1369,8 +1408,8 @@
       "subtests": [
         {
           "name": "Tests webm frame size changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1381,8 +1420,8 @@
       "subtests": [
         {
           "name": "Tests webm video bitrate changes in multiplexed content.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1393,8 +1432,8 @@
       "subtests": [
         {
           "name": "Tests webm video-only bitrate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1405,8 +1444,8 @@
       "subtests": [
         {
           "name": "Tests webm video-only frame rate changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1417,8 +1456,25 @@
       "subtests": [
         {
           "name": "Tests webm video-only frame size changes.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-detach.html",
+      "subtests": [
+        {
+          "name": "Test media.load() before appending data will trigger MediaSource detaching from a media element.",
+          "status": "FAIL",
+          "message": "assert_equals: readyState is \"closed\" expected \"closed\" but got \"open\""
+        },
+        {
+          "name": "Test media.load() after appending data will trigger MediaSource detaching from a media element.",
+          "status": "FAIL",
+          "message": "assert_greater_than: media readyState is greater than \"HAVE_NOTHING\" expected a number greater than 0 but got 0"
         }
       ],
       "status": "OK",
@@ -1497,27 +1553,116 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-duration-buffered.html",
+      "subtests": [
+        {
+          "name": "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function ()\n                {\n                    mediaSource.duration = newDuration;\n                }\" did not throw"
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function ()\n                    {\n                        mediaSource.duration = newDuration;\n                    }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-duration.html",
       "subtests": [
         {
-          "name": "Test seek starts on duration truncation below currentTime",
+          "name": "MediaSource.duration: setting the duration does not trigger any SourceBuffer update",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "name": "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Test endOfStream completes previous seek to truncated duration",
+          "name": "MediaSource.duration: Truncating the duration does not trigger any SourceBuffer update",
           "status": "FAIL",
-          "message": "assert_equals: mediaElement truncatedDuration after seek to it expected 1.5189 but got 1.532517"
+          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
         },
         {
-          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "name": "MediaSource.duration: Truncating the duration during media playback does not trigger any SourceBuffer update",
           "status": "FAIL",
-          "message": "assert_true: adjusted duration expected true got false"
+          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration triggers a seek if new duration is below currentTime",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Adding more data after truncating the duration completes the seek triggered by the truncation",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Calling endOfStream() after truncating the duration completes the seek triggered by the truncation",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration.html",
+      "subtests": [
+        {
+          "name": "MediaSource.duration: setting the duration does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration does not trigger any SourceBuffer update",
+          "status": "FAIL",
+          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration during media playback does not trigger any SourceBuffer update",
+          "status": "FAIL",
+          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Truncating the duration triggers a seek if new duration is below currentTime",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Adding more data after truncating the duration completes the seek triggered by the truncation",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Calling endOfStream() after truncating the duration completes the seek triggered by the truncation",
+          "status": "FAIL",
+          "message": "assert_false: sourceBuffer.updating expected false got true"
+        },
+        {
+          "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1546,12 +1691,103 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-endofstream.html",
+      "subtests": [
+        {
+          "name": "MediaSource.endOfStream(): duration truncated to 0 when there are no buffered coded frames",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.endOfStream(): media element notified that it now has all of the media data",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.endOfStream(): buffered data not modified when endOfStream is called",
+          "status": "FAIL",
+          "message": "assert_equals: Ending the stream does not affect buffered data expected 6.037188 but got 6.0756"
+        },
+        {
+          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute even after truncation",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-errors.html",
+      "subtests": [
+        {
+          "name": "Appending media segment before the first initialization segment.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 3"
+        },
+        {
+          "name": "Signaling 'decode' error via endOfStream() before initialization segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 3"
+        },
+        {
+          "name": "Signaling 'network' error via endOfStream() before initialization segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 2"
+        },
+        {
+          "name": "Signaling 'decode' error via endOfStream() after initialization segment has been appended and the HTMLMediaElement has reached HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"ended\" but got \"closed\""
+        },
+        {
+          "name": "Signaling 'network' error via endOfStream() after initialization segment has been appended and the HTMLMediaElement has reached HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"ended\" but got \"closed\""
+        },
+        {
+          "name": "Signaling 'decode' error via segment parser loop algorithm after initialization segment and partial media segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"error\" but got \"updateend\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-getvideoplaybackquality.html",
       "subtests": [
         {
           "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        },
+        {
+          "name": "Test the totalFrameDelay attribute of HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-getvideoplaybackquality.html",
+      "subtests": [
+        {
+          "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        },
+        {
+          "name": "Test the totalFrameDelay attribute of HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -1812,6 +2048,63 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-liveseekable.html",
+      "subtests": [
+        {
+          "name": "setLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: mediaSource.setLiveSeekableRange is not a function\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+        },
+        {
+          "name": "clearLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: mediaSource.clearLiveSeekableRange is not a function\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+        },
+        {
+          "name": "setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: mediaSource.setLiveSeekableRange is not a function\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+        },
+        {
+          "name": "clearLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: mediaSource.clearLiveSeekableRange is not a function\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+        },
+        {
+          "name": "setLiveSeekableRange throws a TypeError if start is negative",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange throws a TypeError if start is greater than end",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange returns with no error when conditions are correct",
+          "status": "FAIL",
+          "message": "mediaSource.setLiveSeekableRange is not a function"
+        },
+        {
+          "name": "clearLiveSeekableRange returns with no error when conditions are correct",
+          "status": "FAIL",
+          "message": "mediaSource.clearLiveSeekableRange is not a function"
+        },
+        {
+          "name": "HTMLMediaElement.seekable returns the live seekable range or an empty range if that range was cleared when nothing is buffered",
+          "status": "FAIL",
+          "message": "mediaSource.setLiveSeekableRange is not a function"
+        },
+        {
+          "name": "HTMLMediaElement.seekable returns the union of the buffered range and the live seekable range, when set",
+          "status": "FAIL",
+          "message": "mediaSource.setLiveSeekableRange is not a function"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-multiple-attach.html",
       "subtests": [
         {
@@ -1845,8 +2138,20 @@
       "subtests": [
         {
           "name": "Test normal playback case with MediaSource API",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play.html",
+      "subtests": [
+        {
+          "name": "Test normal playback case with MediaSource API",
+          "status": "FAIL",
+          "message": "An attempt was made to use an object that is not, or is no longer, usable"
         }
       ],
       "status": "OK",
@@ -2063,6 +2368,28 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-seekable.html",
+      "subtests": [
+        {
+          "name": "Get seekable time ranges when the sourcebuffer is empty.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get seekable time ranges after init segment received.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get seekable time ranges on an infinite stream.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-sequencemode-append-buffer.html",
       "subtests": [
         {
@@ -2079,6 +2406,23 @@
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
           "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.315"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
+      "subtests": [
+        {
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/aac Reached unreachable code"
+        },
+        {
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -2122,8 +2466,67 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-sourcebuffer-trackdefaults.html",
+      "subtests": [
+        {
+          "name": "Test round-trip of empty SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test round-trip of non-empty SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting trackDefaults on an already-removed SourceBuffer",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting trackDefaults on a SourceBuffer that is updating",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting null SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-sourcebufferlist.html",
       "subtests": [
+        {
+          "name": "Test SourceBufferList getter method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBufferList event dispatching.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebufferlist.html",
+      "subtests": [
+        {
+          "name": "Test SourceBufferList getter method",
+          "status": "PASS",
+          "message": null
+        },
         {
           "name": "Test SourceBufferList event dispatching.",
           "status": "PASS",
@@ -2215,6 +2618,170 @@
           "name": "Test setting timestampoffset after removing the sourcebuffer.",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-trackdefault.html",
+      "subtests": [
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'alternative', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'descriptions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'main', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'main-desc', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'translation', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'commentary', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind '', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'alternative', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'captions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'main', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'sign', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'subtitles', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'commentary', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind '', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'subtitles', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'captions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'descriptions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'chapters', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'metadata', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test mixed valid and invalid audio kinds: type 'audio', language 'en-US', label 'audio label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test mixed valid and invalid video kinds: type 'video', language 'en-US', label 'video label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test mixed valid and invalid text kinds: type 'text', language 'en-US', label 'text label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test invalid 'type' parameter type passed to TrackDefault constructor: type 'invalid type', language 'en-US', label 'label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test invalid 'kinds' parameter type passed to TrackDefault constructor",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test updating the retval of TrackDefault.kinds does not modify TrackDefault.kinds",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-trackdefaultlist.html",
+      "subtests": [
+        {
+          "name": "Test track default list construction, length, and indexed property getter",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test empty track default list construction with and without optional trackDefaults parameter",
+          "status": "FAIL",
+          "message": "TrackDefaultList is not defined"
         }
       ],
       "status": "OK",
