@@ -330,7 +330,6 @@ var tests = [
       '#widl-MediaSource-clearLiveSeekableRange-void',
       '#htmlmediaelement-extensions'
     ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3184',
     comments: [
       'Checks the setLiveSeekableRange/clearLiveSeekableRange methods',
       'Checks the impact on HTMLMediaElement.seekable'
