@@ -18,38 +18,38 @@ var toc = {
           "url": "attributes",
           "children": [
             {
-              "name": "activeSourceBuffers of type SourceBufferList, readonly",
-              "url": "widl-MediaSource-activeSourceBuffers",
+              "name": "sourceBuffers",
+              "url": "dom-mediasource-sourcebuffers",
               "type": "attribute"
             },
             {
-              "name": "duration of type unrestricted double",
-              "url": "widl-MediaSource-duration",
+              "name": "activeSourceBuffers",
+              "url": "dom-mediasource-activesourcebuffers",
               "type": "attribute"
             },
             {
-              "name": "onsourceclose of type EventHandler",
-              "url": "widl-MediaSource-onsourceclose",
+              "name": "readyState",
+              "url": "dom-readystate",
               "type": "attribute"
             },
             {
-              "name": "onsourceended of type EventHandler",
-              "url": "widl-MediaSource-onsourceended",
+              "name": "duration",
+              "url": "dom-mediasource-duration",
               "type": "attribute"
             },
             {
-              "name": "onsourceopen of type EventHandler",
-              "url": "widl-MediaSource-onsourceopen",
+              "name": "onsourceopen",
+              "url": "dom-mediasource-onsourceopen",
               "type": "attribute"
             },
             {
-              "name": "readyState of type ReadyState, readonly",
-              "url": "widl-MediaSource-readyState",
+              "name": "onsourceended",
+              "url": "dom-mediasource-onsourceended",
               "type": "attribute"
             },
             {
-              "name": "sourceBuffers of type SourceBufferList, readonly",
-              "url": "widl-MediaSource-sourceBuffers",
+              "name": "onsourceclose",
+              "url": "dom-mediasource-onsourceclose",
               "type": "attribute"
             }
           ]
@@ -61,32 +61,32 @@ var toc = {
           "children": [
             {
               "name": "addSourceBuffer",
-              "url": "widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type",
-              "type": "method"
-            },
-            {
-              "name": "clearLiveSeekableRange",
-              "url": "widl-MediaSource-clearLiveSeekableRange-void",
-              "type": "method"
-            },
-            {
-              "name": "endOfStream",
-              "url": "widl-MediaSource-endOfStream-void-EndOfStreamError-error",
-              "type": "method"
-            },
-            {
-              "name": "isTypeSupported, static",
-              "url": "widl-MediaSource-isTypeSupported-boolean-DOMString-type",
+              "url": "dom-mediasource-addsourcebuffer",
               "type": "method"
             },
             {
               "name": "removeSourceBuffer",
-              "url": "widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer",
+              "url": "dom-mediasource-removesourcebuffer",
+              "type": "method"
+            },
+            {
+              "name": "endOfStream",
+              "url": "dom-mediasource-endofstream",
               "type": "method"
             },
             {
               "name": "setLiveSeekableRange",
-              "url": "widl-MediaSource-setLiveSeekableRange-void-double-start-double-end",
+              "url": "dom-mediasource-setliveseekablerange",
+              "type": "method"
+            },
+            {
+              "name": "clearLiveSeekableRange",
+              "url": "dom-mediasource-clearliveseekablerange",
+              "type": "method"
+            },
+            {
+              "name": "isTypeSupported",
+              "url": "dom-mediasource-istypesupported",
               "type": "method"
             }
           ]
@@ -146,78 +146,73 @@ var toc = {
           "url": "attributes-1",
           "children": [
             {
-              "name": "appendWindowEnd of type unrestricted double",
-              "url": "widl-SourceBuffer-appendWindowEnd",
+              "name": "mode",
+              "url": "dom-sourcebuffer-mode",
               "type": "attribute"
             },
             {
-              "name": "appendWindowStart of type double",
-              "url": "widl-SourceBuffer-appendWindowStart",
+              "name": "updating",
+              "url": "dom-sourcebuffer-updating",
               "type": "attribute"
             },
             {
-              "name": "audioTracks of type AudioTrackList, readonly",
-              "url": "widl-SourceBuffer-audioTracks",
+              "name": "buffered",
+              "url": "dom-sourcebuffer-buffered",
               "type": "attribute"
             },
             {
-              "name": "buffered of type TimeRanges, readonly",
-              "url": "widl-SourceBuffer-buffered",
+              "name": "timestampOffset",
+              "url": "dom-sourcebuffer-timestampoffset",
               "type": "attribute"
             },
             {
-              "name": "mode of type AppendMode",
-              "url": "widl-SourceBuffer-mode",
+              "name": "audioTracks",
+              "url": "dom-sourcebuffer-audiotracks",
               "type": "attribute"
             },
             {
-              "name": "onabort of type EventHandler",
-              "url": "widl-SourceBuffer-onabort",
+              "name": "videoTracks",
+              "url": "dom-sourcebuffer-videotracks",
               "type": "attribute"
             },
             {
-              "name": "onerror of type EventHandler",
-              "url": "widl-SourceBuffer-onerror",
+              "name": "textTracks",
+              "url": "dom-sourcebuffer-texttracks",
               "type": "attribute"
             },
             {
-              "name": "onupdate of type EventHandler",
-              "url": "widl-SourceBuffer-onupdate",
+              "name": "appendWindowStart",
+              "url": "dom-sourcebuffer-appendwindowstart",
               "type": "attribute"
             },
             {
-              "name": "onupdateend of type EventHandler",
-              "url": "widl-SourceBuffer-onupdateend",
+              "name": "appendWindowEnd",
+              "url": "dom-sourcebuffer-appendwindowend",
               "type": "attribute"
             },
             {
-              "name": "onupdatestart of type EventHandler",
-              "url": "widl-SourceBuffer-onupdatestart",
+              "name": "onupdatestart",
+              "url": "dom-sourcebuffer-onupdatestart",
               "type": "attribute"
             },
             {
-              "name": "textTracks of type TextTrackList, readonly",
-              "url": "widl-SourceBuffer-textTracks",
+              "name": "onupdate",
+              "url": "dom-sourcebuffer-onupdate",
               "type": "attribute"
             },
             {
-              "name": "timestampOffset of type double",
-              "url": "widl-SourceBuffer-timestampOffset",
+              "name": "onupdateend",
+              "url": "dom-sourcebuffer-onupdateend",
               "type": "attribute"
             },
             {
-              "name": "trackDefaults of type TrackDefaultList",
-              "url": "widl-SourceBuffer-trackDefaults",
+              "name": "onerror",
+              "url": "dom-sourcebuffer-onerror",
               "type": "attribute"
             },
             {
-              "name": "updating of type boolean, readonly",
-              "url": "widl-SourceBuffer-updating",
-              "type": "attribute"
-            },
-            {
-              "name": "videoTracks of type VideoTrackList, readonly",
-              "url": "widl-SourceBuffer-videoTracks",
+              "name": "onabort",
+              "url": "dom-sourcebuffer-onabort",
               "type": "attribute"
             }
           ]
@@ -228,28 +223,18 @@ var toc = {
           "url": "methods-1",
           "children": [
             {
+              "name": "appendBuffer",
+              "url": "dom-sourcebuffer-appendbuffer",
+              "type": "method"
+            },
+            {
               "name": "abort",
-              "url": "widl-SourceBuffer-abort-void",
-              "type": "method"
-            },
-            {
-              "name": "appendBuffer",
-              "url": "widl-SourceBuffer-appendBuffer-void-ArrayBuffer-data",
-              "type": "method"
-            },
-            {
-              "name": "appendBuffer",
-              "url": "widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data",
-              "type": "method"
-            },
-            {
-              "name": "appendStream",
-              "url": "widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize",
+              "url": "dom-sourcebuffer-abort",
               "type": "method"
             },
             {
               "name": "remove",
-              "url": "widl-SourceBuffer-remove-void-double-start-unrestricted-double-end",
+              "url": "dom-sourcebuffer-remove",
               "type": "method"
             }
           ]
@@ -286,61 +271,41 @@ var toc = {
             },
             {
               "number": "3.5.6",
-              "name": "Stream Append Loop",
-              "url": "sourcebuffer-stream-append-loop"
-            },
-            {
-              "number": "3.5.7",
               "name": "Range Removal",
               "url": "sourcebuffer-range-removal"
             },
             {
-              "number": "3.5.8",
+              "number": "3.5.7",
               "name": "Initialization Segment Received",
               "url": "sourcebuffer-init-segment-received"
             },
             {
-              "number": "3.5.9",
-              "name": "Default track language",
-              "url": "sourcebuffer-default-track-language"
-            },
-            {
-              "number": "3.5.10",
-              "name": "Default track label",
-              "url": "sourcebuffer-default-track-label"
-            },
-            {
-              "number": "3.5.11",
-              "name": "Default track kinds",
-              "url": "sourcebuffer-default-track-kinds"
-            },
-            {
-              "number": "3.5.12",
+              "number": "3.5.8",
               "name": "Coded Frame Processing",
               "url": "sourcebuffer-coded-frame-processing"
             },
             {
-              "number": "3.5.13",
+              "number": "3.5.9",
               "name": "Coded Frame Removal Algorithm",
               "url": "sourcebuffer-coded-frame-removal"
             },
             {
-              "number": "3.5.14",
+              "number": "3.5.10",
               "name": "Coded Frame Eviction Algorithm",
               "url": "sourcebuffer-coded-frame-eviction"
             },
             {
-              "number": "3.5.15",
+              "number": "3.5.11",
               "name": "Audio Splice Frame Algorithm",
               "url": "sourcebuffer-audio-splice-frame-algorithm"
             },
             {
-              "number": "3.5.16",
+              "number": "3.5.12",
               "name": "Audio Splice Rendering Algorithm",
               "url": "sourcebuffer-audio-splice-rendering-algorithm"
             },
             {
-              "number": "3.5.17",
+              "number": "3.5.13",
               "name": "Text Splice Frame Algorithm",
               "url": "sourcebuffer-text-splice-frame-algorithm"
             }
@@ -359,18 +324,18 @@ var toc = {
           "url": "attributes-2",
           "children": [
             {
-              "name": "length of type unsigned long, readonly",
-              "url": "widl-SourceBufferList-length",
+              "name": "length",
+              "url": "dom-sourcebufferlist-length",
               "type": "attribute"
             },
             {
-              "name": "onaddsourcebuffer of type EventHandler",
-              "url": "widl-SourceBufferList-onaddsourcebuffer",
+              "name": "onaddsourcebuffer",
+              "url": "dom-sourcebufferlist-onaddsourcebuffer",
               "type": "attribute"
             },
             {
-              "name": "onremovesourcebuffer of type EventHandler",
-              "url": "widl-SourceBufferList-onremovesourcebuffer",
+              "name": "onremovesourcebuffer",
+              "url": "dom-sourcebufferlist-onremovesourcebuffer",
               "type": "attribute"
             }
           ]
@@ -381,8 +346,8 @@ var toc = {
           "url": "methods-2",
           "children": [
             {
-              "name": "SourceBuffer",
-              "url": "widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index",
+              "name": "getter",
+              "url": "dfn-sourcebufferlist-getter",
               "type": "method"
             }
           ]
@@ -391,38 +356,18 @@ var toc = {
     },
     {
       "number": "5.",
-      "name": "VideoPlaybackQuality Object",
-      "url": "videoplaybackquality",
+      "name": "URL Object Extensions",
+      "url": "url",
       "children": [
         {
           "number": "5.1",
-          "name": "Attributes",
-          "url": "attributes-3",
+          "name": "Methods",
+          "url": "methods-3",
           "children": [
             {
-              "name": "corruptedVideoFrames of type unsigned long, readonly",
-              "url": "widl-VideoPlaybackQuality-corruptedVideoFrames",
-              "type": "attribute"
-            },
-            {
-              "name": "creationTime of type DOMHighResTimeStamp, readonly",
-              "url": "widl-VideoPlaybackQuality-creationTime",
-              "type": "attribute"
-            },
-            {
-              "name": "droppedVideoFrames of type unsigned long, readonly",
-              "url": "widl-VideoPlaybackQuality-droppedVideoFrames",
-              "type": "attribute"
-            },
-            {
-              "name": "totalFrameDelay of type double, readonly",
-              "url": "widl-VideoPlaybackQuality-totalFrameDelay",
-              "type": "attribute"
-            },
-            {
-              "name": "totalVideoFrames of type unsigned long, readonly",
-              "url": "widl-VideoPlaybackQuality-totalVideoFrames",
-              "type": "attribute"
+              "name": "createObjectURL",
+              "url": "dom-url-createobjecturl",
+              "type": "method"
             }
           ]
         }
@@ -430,204 +375,49 @@ var toc = {
     },
     {
       "number": "6.",
-      "name": "TrackDefault Object",
-      "url": "trackdefault",
-      "children": [
-        {
-          "number": "6.1",
-          "name": "Constructors",
-          "url": "constructors",
-          "children": [
-            {
-              "name": "TrackDefault",
-              "url": "widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID",
-              "type": "constructor"
-            }
-          ]
-        },
-        {
-          "number": "6.2",
-          "name": "Attributes",
-          "url": "attributes-4",
-          "children": [
-            {
-              "name": "byteStreamTrackID of type DOMString, readonly",
-              "url": "widl-TrackDefault-byteStreamTrackID",
-              "type": "attribute"
-            },
-            {
-              "name": "label of type DOMString, readonly",
-              "url": "widl-TrackDefault-label",
-              "type": "attribute"
-            },
-            {
-              "name": "language of type DOMString, readonly",
-              "url": "widl-TrackDefault-language",
-              "type": "attribute"
-            },
-            {
-              "name": "type of type TrackDefaultType, readonly",
-              "url": "widl-TrackDefault-type",
-              "type": "attribute"
-            }
-          ]
-        },
-        {
-          "number": "6.3",
-          "name": "Methods",
-          "url": "methods-3",
-          "children": [
-            {
-              "name": "getKinds",
-              "url": "widl-TrackDefault-getKinds-sequence-DOMString",
-              "type": "method"
-            }
-          ]
-        }
-      ]
+      "name": "HTMLMediaElement Extensions",
+      "url": "htmlmediaelement-extensions"
     },
     {
       "number": "7.",
-      "name": "TrackDefaultList Object",
-      "url": "trackdefaultlist",
+      "name": "AudioTrack Extensions",
+      "url": "audio-track-extensions",
       "children": [
         {
-          "number": "7.1",
-          "name": "Constructors",
-          "url": "constructors-1",
-          "children": [
-            {
-              "name": "TrackDefaultList",
-              "url": "widl-ctor-TrackDefaultList--sequence-TrackDefault--trackDefaults",
-              "type": "constructor"
-            }
-          ]
-        },
-        {
-          "number": "7.2",
-          "name": "Attributes",
-          "url": "attributes-5",
-          "children": [
-            {
-              "name": "length of type unsigned long, readonly",
-              "url": "widl-TrackDefaultList-length",
-              "type": "attribute"
-            }
-          ]
-        },
-        {
-          "number": "7.3",
-          "name": "Methods",
-          "url": "methods-4",
-          "children": [
-            {
-              "name": "TrackDefault",
-              "url": "widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index",
-              "type": "method"
-            }
-          ]
+          "name": "sourceBuffer",
+          "url": "dom-audiotrack-sourcebuffer",
+          "type": "attribute"
         }
       ]
     },
     {
       "number": "8.",
-      "name": "URL Object Extensions",
-      "url": "url",
+      "name": "VideoTrack Extensions",
+      "url": "video-track-extensions",
       "children": [
         {
-          "number": "8.1",
-          "name": "Methods",
-          "url": "methods-5",
-          "children": [
-            {
-              "name": "createObjectURL, static",
-              "url": "widl-URL-createObjectURL-DOMString-MediaSource-mediaSource",
-              "type": "method"
-            }
-          ]
+          "name": "sourceBuffer",
+          "url": "dom-videotrack-sourcebuffer",
+          "type": "attribute"
         }
       ]
     },
     {
       "number": "9.",
-      "name": "HTMLMediaElement Extensions",
-      "url": "htmlmediaelement-extensions"
-    },
-    {
-      "number": "10.",
-      "name": "HTMLVideoElement Extensions",
-      "url": "htmlvideoelement-extensions",
-      "children": [
-        {
-          "number": "10.1",
-          "name": "Methods",
-          "url": "methods-6",
-          "children": [
-            {
-              "name": "getVideoPlaybackQuality",
-              "url": "widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality",
-              "type": "method"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": "11.",
-      "name": "AudioTrack Extensions",
-      "url": "audio-track-extensions",
-      "children": [
-        {
-          "number": "11.1",
-          "name": "Attributes",
-          "url": "attributes-6",
-          "children": [
-            {
-              "name": "sourceBuffer of type SourceBuffer, readonly , nullable",
-              "url": "widl-AudioTrack-sourceBuffer",
-              "type": "attribute"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": "12.",
-      "name": "VideoTrack Extensions",
-      "url": "video-track-extensions",
-      "children": [
-        {
-          "number": "12.1",
-          "name": "Attributes",
-          "url": "attributes-7",
-          "children": [
-            {
-              "name": "sourceBuffer of type SourceBuffer, readonly , nullable",
-              "url": "widl-VideoTrack-sourceBuffer",
-              "type": "attribute"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": "13.",
       "name": "TextTrack Extensions",
       "url": "text-track-extensions",
       "children": [
         {
-          "number": "13.1",
-          "name": "Attributes",
-          "url": "attributes-8",
-          "children": [
-            {
-              "name": "sourceBuffer of type SourceBuffer, readonly , nullable",
-              "url": "widl-TextTrack-sourceBuffer",
-              "type": "attribute"
-            }
-          ]
+          "name": "sourceBuffer",
+          "url": "dom-texttrack-sourcebuffer",
+          "type": "attribute"
         }
       ]
+    },
+    {
+      "number": "10.",
+      "name": "Byte Stream Formats",
+      "url": "byte-stream-formats"
     }
   ]
-};
+}

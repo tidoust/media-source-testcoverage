@@ -1,31 +1,31 @@
 var tests = [
   {
     url: 'SourceBuffer-abort-readyState.html',
-    checks: '#widl-SourceBuffer-abort-void'
+    checks: '#dom-sourcebuffer-abort'
   },
   {
     url: 'SourceBuffer-abort-removed.html',
-    checks: '#widl-SourceBuffer-abort-void'
+    checks: '#dom-sourcebuffer-abort'
   },
   {
     url: 'SourceBuffer-abort-updating.html',
-    checks: '#widl-SourceBuffer-abort-void'
+    checks: '#dom-sourcebuffer-abort'
   },
   {
     url: 'SourceBuffer-abort.html',
-    checks: '#widl-SourceBuffer-abort-void'
+    checks: '#dom-sourcebuffer-abort'
   },
   {
     url: 'URL-createObjectURL-null.html',
-    checks: '#widl-URL-createObjectURL-DOMString-MediaSource-mediaSource'
+    checks: '#dom-url-createobjecturl'
   },
   {
     url: 'URL-createObjectURL-revoke.html',
-    checks: '#widl-URL-createObjectURL-DOMString-MediaSource-mediaSource'
+    checks: '#dom-url-createobjecturl'
   },
   {
     url: 'URL-createObjectURL.html',
-    checks: '#widl-URL-createObjectURL-DOMString-MediaSource-mediaSource'
+    checks: '#dom-url-createobjecturl'
   },
   {
     url: 'mediasource-append-legacystream.html',
@@ -35,53 +35,43 @@ var tests = [
   {
     url: 'mediasource-appendbuffer-quota-exceeded.html',
     checks: '#sourcebuffer-prepare-append',
-    definedIn: 'chromium',
     comments: 'checks step 6 for appendBuffer'
-  },
-  {
-    url: 'mediasource-appendstream-quota-exceeded.html',
-    checks: '#sourcebuffer-prepare-append',
-    definedIn: 'chromium',
-    comments: 'checks step 6 for appendStream'
   },
   {
     url: 'mediasource-avtracks.html',
     checks: [
-      '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer',
-      '#widl-SourceBuffer-audioTracks',
-      '#widl-SourceBuffer-videoTracks',
-      '#widl-AudioTrack-sourceBuffer',
-      '#widl-VideoTrack-sourceBuffer',
+      '#dom-mediasource-removesourcebuffer',
+      '#dom-sourcebuffer-audiotracks',
+      '#dom-sourcebuffer-videotracks',
+      '#dom-audiotrack-sourcebuffer',
+      '#dom-videotrack-sourcebuffer',
       '#mediasource-detach',
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
+      '#dom-mediasource-sourcebuffers',
+      '#dom-sourcebuffer-appendbuffer',
       '#sourcebuffer-buffer-append'
     ],
-    definedIn: 'chromium',
     comments: 'Check that media tracks and their properties are populated properly. Checks visible outcomes of SourceBuffer algorithms (e.g. 3.5.1, 3.5.12), removeSourceBuffer (2.2), detach from a media element (2.4.2)'
   },
   {
     url: 'mediasource-detach.html',
     checks: [
       '#mediasource-detach',
-      '#widl-MediaSource-readyState',
-      '#widl-MediaSource-duration',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
-    ],
-    definedIn: 'chromium'
+      '#dom-readystate',
+      '#dom-mediasource-duration',
+      '#dom-mediasource-addsourcebuffer'
+    ]
   },
   {
     url: 'mediasource-errors.html',
     checks: [
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
+      '#dom-sourcebuffer-appendbuffer',
       '#mediasource-attach',
       '#mediasource-detach',
       '#end-of-stream-algorithm',
       '#sourcebuffer-buffer-append',
       '#sourcebuffer-segment-parser-loop',
       '#sourcebuffer-append-error'
-    ],
-    definedIn: 'chromium'
+    ]
   },
   {
     url: 'mediasource-garbage-collection-before-sourceopen.html',
@@ -100,13 +90,12 @@ var tests = [
   },
   {
     url: 'mediasource-seekable.html',
-    checks: '#htmlmediaelement-extensions',
-    definedIn: 'chromium'
+    checks: '#htmlmediaelement-extensions'
   },
   {
     url: 'mediasource-sourcebuffer-trackdefaults.html',
-    checks: '#widl-SourceBuffer-trackDefaults',
-    definedIn: 'chromium'
+    comments: 'TrackDefault no longer in MSE spec',
+    useless: true
   },
   {
     url: 'mediasource-sourcebufferlist-crash.html',
@@ -115,80 +104,74 @@ var tests = [
   },
   {
     url: 'mediasource-trackdefault.html',
-    checks: [
-      '#widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID'
-    ],
-    definedIn: 'chromium',
-    comments: 'Test needs to be updated to check getKinds instead of kinds which no longer exists'
+    comments: 'TrackDefault no longer in MSE spec',
+    useless: true
   },
   {
     url: 'mediasource-trackdefaultlist.html',
-    checks: [
-      '#widl-ctor-TrackDefaultList--sequence-TrackDefault--trackDefaults',
-      '#widl-TrackDefaultList-length',
-      '#widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index'
-    ],
-    definedIn: 'chromium'
+    definedIn: 'chromium',
+    useless: true,
+    comments: 'TrackDefaultList no longer in MSE spec'
   },
   {
     url: 'mediasource-addsourcebuffer.html',
     checks: [
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-activeSourceBuffers'
+      '#dom-mediasource-addsourcebuffer',
+      '#dom-mediasource-sourcebuffers',
+      '#dom-mediasource-activesourcebuffers'
     ]
   },
   {
     url: 'mediasource-append-buffer.html',
     checks: [
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
-      '#widl-SourceBuffer-updating',
-      '#widl-MediaSource-duration',
-      '#widl-MediaSource-readyState',
-      '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#dom-sourcebuffer-appendbuffer',
+      '#dom-sourcebuffer-updating',
+      '#dom-mediasource-duration',
+      '#dom-readystate',
+      '#dom-mediasource-endofstream',
       '#end-of-stream-algorithm',
-      '#widl-SourceBuffer-timestampOffset',
-      '#widl-SourceBuffer-abort-void',
+      '#dom-sourcebuffer-timestampoffset',
+      '#dom-sourcebuffer-abort',
       '#sourcebuffer-buffer-append'
     ]
   },
   {
     url: 'mediasource-appendwindow.html',
     checks: [
-      '#widl-SourceBuffer-appendWindowStart',
-      '#widl-SourceBuffer-appendWindowEnd'
+      '#dom-sourcebuffer-appendwindowstart',
+      '#dom-sourcebuffer-appendwindowend'
     ]
   },
   {
     url: 'mediasource-buffered.html',
     checks: [
       '#htmlmediaelement-extensions',
-      '#widl-SourceBuffer-buffered',
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-activeSourceBuffers'
+      '#dom-sourcebuffer-buffered',
+      '#dom-mediasource-sourcebuffers',
+      '#dom-mediasource-activesourcebuffers'
     ]
   },
   {
     url: 'mediasource-closed.html',
     checks: [
-      '#widl-MediaSource-activeSourceBuffers',
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-readyState',
-      '#widl-MediaSource-duration',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
-      '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer',
-      '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#dom-mediasource-activesourcebuffers',
+      '#dom-mediasource-sourcebuffers',
+      '#dom-readystate',
+      '#dom-mediasource-duration',
+      '#dom-mediasource-addsourcebuffer',
+      '#dom-mediasource-removesourcebuffer',
+      '#dom-mediasource-endofstream',
       '#end-of-stream-algorithm',
-      '#widl-SourceBuffer-abort-void'
+      '#dom-sourcebuffer-abort'
     ],
     comments: 'checks closed clauses in various algorithms'
   },
   {
     url: 'mediasource-config-changes.js',
     checks: [
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
-      '#widl-SourceBuffer-timestampOffset',
-      '#widl-MediaSource-duration',
+      '#dom-sourcebuffer-appendbuffer',
+      '#dom-sourcebuffer-timestampoffset',
+      '#dom-mediasource-duration',
       '#duration-change-algorithm',
       '#sourcebuffer-buffer-append'
     ]
@@ -196,39 +179,40 @@ var tests = [
   {
     url: 'mediasource-duration-boundaryconditions.html',
     checks: [
-      '#widl-MediaSource-duration',
+      '#dom-mediasource-duration',
       '#duration-change-algorithm'
     ]
   },
   {
     url: 'mediasource-duration.html',
     checks: [
-      '#widl-MediaSource-duration',
+      '#dom-mediasource-duration',
       '#duration-change-algorithm'
     ],
     comments: 'may go too far, as it also tests MediaElement events'
   },
   {
+    url: 'mediasource-endofstream.html',
+    checks: [
+      '#dom-mediasource-endofstream',
+      '#end-of-stream-algorithm'
+    ]
+  },
+  {
     url: 'mediasource-endofstream-invaliderror.html',
     checks: [
-      '#widl-MediaSource-endOfStream-void-EndOfStreamError-error',
+      '#dom-mediasource-endofstream',
       '#end-of-stream-algorithm'
     ]
   },
   {
     url: 'mediasource-getvideoplaybackquality.html',
-    checks: [
-      '#widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality',
-      '#widl-VideoPlaybackQuality-corruptedVideoFrames',
-      '#widl-VideoPlaybackQuality-creationTime',
-      '#widl-VideoPlaybackQuality-droppedVideoFrames',
-      '#widl-VideoPlaybackQuality-totalFrameDelay',
-      '#widl-VideoPlaybackQuality-totalVideoFrames'
-    ]
+    comments: 'VideoPlaybackQuality no longer in MSE spec',
+    useless: true
   },
   {
     url: 'mediasource-is-type-supported.html',
-    checks: '#widl-MediaSource-isTypeSupported-boolean-DOMString-type',
+    checks: '#dom-mediasource-istypesupported',
     comments: '(specific to Chrome, though)'
   },
   {
@@ -258,14 +242,13 @@ var tests = [
   {
     url: 'mediasource-remove.html',
     checks: [
-      '#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end',
+      '#dom-sourcebuffer-remove',
       '#sourcebuffer-range-removal'
     ]
   },
   {
     url: 'mediasource-removesourcebuffer.html',
-    checks: '#widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3187',
+    checks: '#dom-mediasource-removesourcebuffer',
     comments: 'Completed to cover step 2 (abort and updateend events)'
   },
   {
@@ -281,7 +264,7 @@ var tests = [
   {
     url: 'mediasource-sequencemode-append-buffer.html',
     checks: [
-      '#widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data',
+      '#dom-sourcebuffer-appendbuffer',
       '#sourcebuffer-prepare-append',
       '#sourcebuffer-buffer-append'
     ]
@@ -289,34 +272,33 @@ var tests = [
   {
     url: 'mediasource-sourcebuffer-mode.html',
     checks: [
-      '#widl-SourceBuffer-mode',
-      '#widl-SourceBuffer-timestampOffset',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type'
+      '#dom-sourcebuffer-mode',
+      '#dom-sourcebuffer-timestampoffset',
+      '#dom-mediasource-addsourcebuffer'
     ]
   },
   {
     url: 'mediasource-sourcebufferlist.html',
     checks: [
-      '#widl-MediaSource-sourceBuffers',
-      '#widl-MediaSource-activeSourceBuffers',
+      '#dom-mediasource-sourcebuffers',
+      '#dom-mediasource-activesourcebuffers',
       '#mediasource-detach',
-      '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
-      '#widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index',
-      '#widl-SourceBufferList-length'
+      '#dom-mediasource-addsourcebuffer',
+      '#dfn-sourcebufferlist-getter',
+      '#dom-sourcebufferlist-length'
     ],
     comments: 'checks properties of sourceBuffers list'
   },
   {
     url: 'mediasource-timestamp-offset.html',
-    checks: '#widl-SourceBuffer-timestampOffset'
+    checks: '#dom-sourcebuffer-timestampoffset'
   },
   {
-    url: 'mediasource-activeSourceBuffers.html',
+    url: 'mediasource-activesourcebuffers.html',
     checks: [
-      '#widl-MediaSource-activeSourceBuffers',
+      '#dom-mediasource-activesourcebuffers',
       '#active-source-buffer-changes'
     ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3182',
     comments: [
       'Checks that the active source buffers are the right ones',
       'Checks the order of active SourceBuffers',
@@ -326,8 +308,8 @@ var tests = [
   {
     url: 'mediasource-liveseekable.html',
     checks: [
-      '#widl-MediaSource-setLiveSeekableRange-void-double-start-double-end',
-      '#widl-MediaSource-clearLiveSeekableRange-void',
+      '#dom-mediasource-setliveseekablerange',
+      '#dom-mediasource-clearliveseekablerange',
       '#htmlmediaelement-extensions'
     ],
     comments: [
@@ -337,22 +319,14 @@ var tests = [
   },
   {
     url: 'mediasource-attach-stops-delaying-load-event.html',
-    checks: '#mediasource-attach',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3082'
+    checks: '#mediasource-attach'
   },
   {
     url: 'mediasource-sourcebuffer-mode-timestamps.html',
-    checks: '#widl-SourceBuffer-mode',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3205'
+    checks: '#dom-sourcebuffer-mode'
   },
   {
     url: 'mediasource-addsourcebuffer-mode.html',
-    checks: '#widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3224'
-  },
-  {
-    url: 'mediasource-duration-buffered.html',
-    checks: '#duration-change-algorithm',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3232'
+    checks: '#dom-mediasource-addsourcebuffer'
   }
 ];

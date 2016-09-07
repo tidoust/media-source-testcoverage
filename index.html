@@ -67,53 +67,21 @@
     <section>
       <h2>Action plan</h2>
       <ul>
-        <li><strong>@wolenetz</strong> and <strong>@chcunningham</strong> to import missing tests from Chromium:
-        <ul>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-appendbuffer-quota-exceeded.html">mediasource-appendbuffer-quota-exceeded.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-avtracks.html">mediasource-avtracks.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-detach.html">mediasource-detach.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-errors.html">mediasource-errors.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-seekable.html">mediasource-seekable.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-trackdefault.html">mediasource-trackdefault.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-trackdefaultlist.html">mediasource-trackdefaultlist.html</a></li>
-          <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/mediasource-sourcebuffer-trackdefaults.html">mediasource-sourcebuffer-trackdefaults.html</a></li>
-        </ul></li>
-        <li><del><strong>@tidoust</strong> to convert Chromium tests</del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3264">#3264</a>)
         <li><strong>@chcunningham</strong> to import missing tests on <code>on{event}</code> attributes</li>
-        <li><strong>@wolenetz</strong> to signal when <a href="https://github.com/w3c/web-platform-tests/pull/3082">#3082</a> can be merged</li>
-        <li><strong>@jdsmith3000</strong> and <strong>@wolenetz</strong> to review on-going pull requests:
-        <ul>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3179">#3179</a> Replaced InvalidAccessError by TypeError in MSE tests</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3182">#3182</a> Checks MediaSource.activeSourceBuffers and changes to track state</li>
-          <li><del><a href="https://github.com/w3c/web-platform-tests/pull/3184">#3184</a> Checks live seekable range and HTMLMediaElement.seekable</del></li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3187">#3187</a> Completed MediaSource.removeSourceBuffer tests</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3205">#3205</a> SourceBuffer.mode with generate timestamps flag true</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3206">#3206</a> Check TypeError for sourceBuffer.remove()</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3207">#3207</a> step 6.2. Queue a task to fire a simple event named sourceopen at the media source parent</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3215">#3215</a> Added AudioTrackList and VideoTrackList to known interfaces</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3223">#3223</a> Check on SourceBufferList getter added</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3224">#3224</a> Check that SourceBuffer.mode is correctly initialized</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3231">#3231</a> Additional boundary checks on VideoPlaybackQuality attributes</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3232">#3232</a> Media source duration change algorithm (step 2 in particular)</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3233">#3233</a> New tests for the End of stream algorithm</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/3264">#3264</a> Chromium tests converted to web platform tests</li>
-        </ul></li>
-        <li><strong><em>Everyone</em></strong> to agree to discard (or merge) old pull requests:
-        <ul>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/823">#823</a> Tests for Section 2. MediaSource Object API in Media Source Extensions.</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/939">#939</a> Unit tests for SourceBuffer#timestampOffset attribute</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/954">#954</a> Unit tests for SourceBuffer#appendStream function</li>
-          <li><a href="https://github.com/w3c/web-platform-tests/pull/1405">#1405</a> Proposed improvments to isTypeSupported tests</li>
-        </ul></li>
+        <li><strong>@tidoust</strong> to generate test results when test suite and implementations are updated</li>
+        <li><del><strong>@wolenetz</strong> and <strong>@chcunningham</strong> to import missing tests from Chromium</del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3612">#3612</a>)</li>
+        <li><del><strong>@tidoust</strong> to convert Chromium tests</del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3264">#3264</a>)
+        <li><del><strong>@wolenetz</strong> to signal when <a href="https://github.com/w3c/web-platform-tests/pull/3082">#3082</a> can be merged</del></li>
+        <li><del><strong>@jdsmith3000</strong> and <strong>@wolenetz</strong> to review on-going pull requests</del></li>
+        <li><del><strong><em>Everyone</em></strong> to agree to discard (or merge) old pull requests</del></li>
         <li><del><strong>@tidoust</strong> to add a test case for <code>MediaSource.addSourceBuffer()</code> that sets the <em>generate timestamps flag</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3224">#3224</a>)</li>
         <li><del><strong>@tidoust</strong> to add a test case for step 2 of <em>Duration change</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3232">#3232</a>)</li>
-        <li><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em> ⇐ is there a way to force a UA into this state?</li>
-        <li><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code> ⇐ pending test import from Chromium</li>
+        <li><del><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em></del> (<em>good enough</em>)</li>
+        <li><del><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code></del> (no longer needed)</li>
         <li><del><strong>@tidoust</strong> to add missing test cases for <code>VideoPlaybackQuality</code></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3231">#3231</a>)</li>
-        <li><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec for no particular reason, such as <code>isTypeSupported</code> but also tests in <a href="https://github.com/w3c/web-platform-tests/blob/master/media-source/mediasource-addsourcebuffer.html">mediasource-addsourcebuffer.html</a> for instance</li>
-        <li><strong>@tidoust</strong> to review algorithms and consider additional corner case tests</li>
-        <li><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</li>
-        <li><strong>@tidoust</strong> to generate test results when test suite and implementations are updated</li>
+        <li><del><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec for no particular reason</del> (<em>good enough</em>)</li>
+        <li><del><strong>@tidoust</strong> to review algorithms and consider additional corner case tests</del> (<em>good enough</em>)</li>
+        <li><del><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</del> (<em>good enough</em>)</li>
       </ul>
     </section>
 
@@ -154,13 +122,14 @@
 // (because they don't contain testable assertions per se)
 var sectionsToIgnore = [
   'Introduction',
-  'Byte Stream Formats',
   'Examples',
   'Acknowledgments',
   'Revision History',
   'References',
   'Event Summary',
-  'Track Buffers'
+  'Track Buffers',
+  'VideoPlaybackQuality',
+  'Conformance'
 ];
 
 
@@ -174,7 +143,7 @@ var forEach = function (array, callback, scope) {
 
 // Parse the table of contents and extract the sections of interest
 var extractTocRecursively = function (tocEntry, section) {
-  forEach(tocEntry.querySelectorAll('ul > li'), function (subTocEntry) {
+  forEach(tocEntry.querySelectorAll('ol > li'), function (subTocEntry) {
     if (subTocEntry.parentNode.parentNode !== tocEntry) {
       return;
     }
@@ -212,9 +181,9 @@ var addObjectPropertiesRecursively = function (section) {
     return;
   }
   forEach(document.querySelectorAll(
-    '#' + section.url + ' > dl:not(.switch) > dt'),
+    '#' + section.url + ' dl:not(.switch) > dt > dfn'),
     function (dfn) {
-      var type = dfn.parentNode.getAttribute('class') || 's';
+      var type = dfn.parentNode.parentNode.getAttribute('class') || 's';
       var subSection = {
         name: dfn.innerText,
         url: dfn.getAttribute('id'),

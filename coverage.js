@@ -1,42 +1,25 @@
 var coverage = {
-  'widl-MediaSource-activeSourceBuffers': {
-    coverage: 100,
-    assignee: '@tidoust'
-  },
-  'widl-MediaSource-sourceBuffers': 100,
-  'widl-MediaSource-duration': 100,
-  'widl-MediaSource-onsourceclose': {
+  'dom-mediasource-activesourcebuffers': 100,
+  'dom-mediasource-sourcebuffers': 100,
+  'dom-mediasource-duration': 100,
+  'dom-mediasource-onsourceclose': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-MediaSource-onsourceended': {
+  'dom-mediasource-onsourceended': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-MediaSource-onsourceopen': {
+  'dom-mediasource-onsourceopen': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-MediaSource-readyState': 100,
-  'widl-MediaSource-addSourceBuffer-SourceBuffer-DOMString-type': {
-    coverage: 100,
-    comments: [
-      'Test for step 1 needs update to TypeError (PR3179)',
-      'Test on generate timestamps flag in PR3224 (requires audio/mpeg or audio/aac support)'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-MediaSource-clearLiveSeekableRange-void': {
-    coverage: 100,
-    assignee: '@tidoust'
-  },
-  'widl-MediaSource-endOfStream-void-EndOfStreamError-error': 100,
-  'widl-MediaSource-isTypeSupported-boolean-DOMString-type': {
-    coverage: 90,
-    comments: 'Test is implementation-specific as it assumes some codecs are supported',
-    assignee: '@tidoust'
-  },
-  'widl-MediaSource-removeSourceBuffer-void-SourceBuffer-sourceBuffer': {
+  'dom-readystate': 100,
+  'dom-mediasource-addsourcebuffer': 100,
+  'dom-mediasource-clearliveseekablerange': 100,
+  'dom-mediasource-endofstream': 100,
+  'dom-mediasource-istypesupported': 100,
+  'dom-mediasource-removesourcebuffer': {
     coverage: 90,
     comments: [
       'No test on TextTrackList (steps 7, 8)',
@@ -45,27 +28,10 @@ var coverage = {
     ],
     assignee: '@tidoust'
   },
-  'widl-MediaSource-setLiveSeekableRange-void-double-start-double-end': {
-    coverage: 100,
-    assignee: '@tidoust'
-  },
-  'active-source-buffer-changes': {
-    coverage: 100,
-    assignee: '@tidoust'
-  },
-  'mediasource-attach': {
-    coverage: 95,
-    comments: [
-      'No real test on step 4 but see issue 99: https://github.com/w3c/media-source/issues/99',
-      'Basically all tests in the test suite use the sourceopen event fired at step 3'
-    ],
-    assignee: '@tidoust'
-  },
-  'mediasource-detach': {
-    coverage: 95,
-    comments: 'There may be other initial conditions to test',
-    assignee: '@tidoust'
-  },
+  'dom-mediasource-setliveseekablerange': 100,
+  'active-source-buffer-changes': 100,
+  'mediasource-attach': 100,
+  'mediasource-detach': 100,
   'mediasource-seeking': {
     coverage: 90,
     comments: [
@@ -78,74 +44,57 @@ var coverage = {
   },
   'buffer-monitoring': {
     coverage: 0,
-    comments: 'Hmm, shouldn\'t the event steps in that algorithm be dropped? HTML5.1 already triggers these events whenever readyState gets changed',
     assignee: '@tidoust'
   },
-  'duration-change-algorithm': {
-    coverage: 90,
-    comments: [
-      'Test for step 2 in PR3232',
-      'No test for step 5 (but hard to test)'
-    ],
-    assignee: '@tidoust'
-  },
-  'end-of-stream-algorithm': {
-    coverage: 100,
-    comments: [
-      'Test on duration change in step 3 in PR3233',
-      'Most checks in mediasource-errors.html'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-SourceBuffer-appendWindowEnd': 100,
-  'widl-SourceBuffer-appendWindowStart': 100,
-  'widl-SourceBuffer-audioTracks': 100,
-  'widl-SourceBuffer-buffered': {
+  'duration-change-algorithm': 100,
+  'end-of-stream-algorithm': 100,
+  'dom-sourcebuffer-appendwindowend': 100,
+  'dom-sourcebuffer-appendwindowstart': 100,
+  'dom-sourcebuffer-audiotracks': 100,
+  'dom-sourcebuffer-buffered': {
     coverage: 90,
     comments: 'Tests seem to cover all steps but we may want to check more complex cases that create multiple ranges',
     assignee: '@plehegar'
   },
-  'widl-SourceBuffer-mode': {
+  'dom-sourcebuffer-mode': {
     coverage: 90,
     comments: [
-      'Test for step 4 in PR3205',
       'No test for step 7 on groups start/end timestamps (but hard to test)'
     ],
     assignee: '@plehegar'
   },
-  'widl-SourceBuffer-trackDefaults': 100,
-  'widl-SourceBuffer-onabort': {
+  'dom-sourcebuffer-onabort': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-onerror': {
+  'dom-sourcebuffer-onerror': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-onupdate': {
+  'dom-sourcebuffer-onupdate': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-onupdateend': {
+  'dom-sourcebuffer-onupdateend': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-onupdatestart': {
+  'dom-sourcebuffer-onupdatestart': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-textTracks': {
+  'dom-sourcebuffer-texttracks': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBuffer-timestampOffset': {
+  'dom-sourcebuffer-timestampoffset': {
     coverage: 95,
     comments: 'Not sure step 6 is tested or easily testable',
     assignee: '@plehegar'
   },
-  'widl-SourceBuffer-updating': 100,
-  'widl-SourceBuffer-videoTracks': 100,
-  'widl-SourceBuffer-abort-void': {
+  'dom-sourcebuffer-updating': 100,
+  'dom-sourcebuffer-videotracks': 100,
+  'dom-sourcebuffer-abort': {
     coverage: 90,
     comments: [
       'No test for step 3 (range removal algorithm)',
@@ -153,19 +102,11 @@ var coverage = {
     ],
     assignee: '@plehegar'
   },
-  'widl-SourceBuffer-appendBuffer-void-ArrayBufferView-data': {
+  'dom-sourcebuffer-appendbuffer': {
     coverage: 100,
     comments: 'Tests in mediasource-append-buffer.html are enough to cover all steps'
   },
-  'widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize': 0,
-  'widl-SourceBuffer-remove-void-double-start-unrestricted-double-end': {
-    coverage: 100,
-    comments: [
-      'Test for step 3 (duration equals NaN) in PR3206',
-      'Test for step 6.2 in PR3207'
-    ],
-    assignee: '@plehegar'
-  },
+  'dom-sourcebuffer-remove': 100,
   'sourcebuffer-segment-parser-loop': {
     assignee: '@plehegar'
   },
@@ -203,15 +144,6 @@ var coverage = {
   'sourcebuffer-init-segment-received': {
     assignee: '@plehegar'
   },
-  'sourcebuffer-default-track-language': {
-    assignee: '@plehegar'
-  },
-  'sourcebuffer-default-track-label': {
-    assignee: '@plehegar'
-  },
-  'sourcebuffer-default-track-kinds': {
-    assignee: '@plehegar'
-  },
   'sourcebuffer-coded-frame-processing': {
     assignee: '@plehegar'
   },
@@ -230,76 +162,25 @@ var coverage = {
   'sourcebuffer-text-splice-frame-algorithm': {
     assignee: '@plehegar'
   },
-  'widl-SourceBufferList-length': {
+  'dom-sourcebufferlist-length': {
     coverage: 100,
     comments: 'Typically covered by tests on activeSourceBuffers and sourceBuffers'
   },
-  'widl-SourceBufferList-SourceBuffer-getter-unsigned-long-index': {
+  'dfn-sourcebufferlist-getter': {
     coverage: 100,
     comments: [
-      'Test for step 1 in PR3223',
       'Typically covered by tests on activeSourceBuffers and sourceBuffers'
     ],
-    assignee: '@tidoust'
   },
-  'widl-SourceBufferList-onaddsourcebuffer': {
+  'dom-sourcebufferlist-onaddsourcebuffer': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-SourceBufferList-onremovesourcebuffer': {
+  'dom-sourcebufferlist-onremovesourcebuffer': {
     coverage: 0,
     assignee: '@chcunningham'
   },
-  'widl-VideoPlaybackQuality-corruptedVideoFrames': {
-    coverage: 90,
-    comments: [
-      'Some tests in PR3231',
-      'Can we force corruptedVideoFrames to increase?'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-VideoPlaybackQuality-creationTime': {
-    coverage: 100,
-    comments: 'Some tests in PR3231',
-    assignee: '@tidoust'
-  },
-  'widl-VideoPlaybackQuality-droppedVideoFrames': {
-    coverage: 90,
-    comments: [
-      'Some tests in PR3231',
-      'Can we force corruptedVideoFrames to increase?'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-VideoPlaybackQuality-totalFrameDelay': {
-    coverage: 100,
-    comments: 'Some tests in PR3231',
-    assignee: '@tidoust'
-  },
-  'widl-VideoPlaybackQuality-totalVideoFrames': {
-    coverage: 100,
-    comments: 'Tests in PR3231',
-    assignee: '@tidoust'
-  },
-  'widl-ctor-TrackDefault--TrackDefaultType-type-DOMString-language-DOMString-label-sequence-DOMString--kinds-DOMString-byteStreamTrackID': {
-    coverage: 50,
-    comments: [
-      'No test for step 1 (bad language)'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-TrackDefault-byteStreamTrackID': 100,
-  'widl-TrackDefault-label': 100,
-  'widl-TrackDefault-language': 100,
-  'widl-TrackDefault-type': 100,
-  'widl-TrackDefault-getKinds-sequence-DOMString': {
-    coverage: 0,
-    assignee: '@tidoust'
-  },
-  'widl-ctor-TrackDefaultList--sequence-TrackDefault--trackDefaults': 100,
-  'widl-TrackDefaultList-length': 100,
-  'widl-TrackDefaultList-TrackDefault-getter-unsigned-long-index': 100,
-  'widl-URL-createObjectURL-DOMString-MediaSource-mediaSource': 100,
+  'dom-url-createobjecturl': 100,
   'htmlmediaelement-extensions': {
     coverage: 95,
     comments: [
@@ -307,17 +188,9 @@ var coverage = {
     ],
     assignee: '@tidoust'
   },
-  'widl-HTMLVideoElement-getVideoPlaybackQuality-VideoPlaybackQuality': {
-    coverage: 90,
-    comments: [
-      'Additional boundary checks in PR3231',
-      'Can we force droppedVideoFrames and corruptedVideoFrames to increase?'
-    ],
-    assignee: '@tidoust'
-  },
-  'widl-AudioTrack-sourceBuffer': 100,
-  'widl-VideoTrack-sourceBuffer': 100,
-  'widl-TextTrack-sourceBuffer': {
+  'dom-audiotrack-sourcebuffer': 100,
+  'dom-videotrack-sourcebuffer': 100,
+  'dom-texttrack-sourcebuffer': {
     coverage: 0,
     assignee: '@plehegar'
   }
