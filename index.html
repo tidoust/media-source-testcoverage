@@ -43,13 +43,13 @@
   <body>
     <section id='abstract'>
       <p>
-        This document provides a rough evaluation of the coverage of the Media Source test suite against the Media Source Extensions specification [[!MEDIA-SOURCE]] and an action plan to complete the test suite.
+        This document provided a rough evaluation of the coverage of the Media Source test suite against the Candidate Recommendation of the Media Source Extensions specification [[!MEDIA-SOURCE]] and an action plan to complete the test suite.
       </p>
     </section>
 
     <section id='sotd'>
-      <p>
-        This document is only intended to be maintained while the HTML Media Extensions Working Group is busy assembling an implementation report to be able to publish the Media Source Extensions specification as a Proposed Recommendation, mid 2016. Information in this document will quickly become obsolete afterwards.
+      <p class="warning">
+        <strong>This document is no longer maintained</strong>. It helped the HTML Media Extensions Working Group with the completion of the test suite and the creation of an implementation report for the Media Source Extensions specification mid-2016. It does not reflect latest changes made to the test suite before publication as Proposed Recommendation. As such, information in this document should be regarded as <strong>historical and obsolete</strong>.
       </p>
     </section>
 
@@ -61,27 +61,6 @@
         <li>Test results: <a href="https://w3c.github.io/test-results/media-source/all.html">All</a>, <a href="https://w3c.github.io/test-results/media-source/less-than-2.html">Less than 2</a>, <a href="https://w3c.github.io/test-results/media-source/complete-fails.html">Complete fails</a></li>
         <li><a href="https://github.com/w3c/web-platform-tests/pulls?q=is%3Apr+is%3Aopen+label%3Amedia-source">Pull requests for the W3C test suite</a></li>
         <li><a href="https://cs.chromium.org/chromium/src/third_party/WebKit/LayoutTests/http/tests/media/media-source/">Chromium test suite</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Action plan</h2>
-      <ul>
-        <li><strong>@chcunningham</strong> to import missing tests on <code>on{event}</code> attributes</li>
-        <li><strong>@tidoust</strong> to generate test results when test suite and implementations are updated</li>
-        <li><del><strong>@wolenetz</strong> and <strong>@chcunningham</strong> to import missing tests from Chromium</del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3612">#3612</a>)</li>
-        <li><del><strong>@tidoust</strong> to convert Chromium tests</del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3264">#3264</a>)
-        <li><del><strong>@wolenetz</strong> to signal when <a href="https://github.com/w3c/web-platform-tests/pull/3082">#3082</a> can be merged</del></li>
-        <li><del><strong>@jdsmith3000</strong> and <strong>@wolenetz</strong> to review on-going pull requests</del></li>
-        <li><del><strong><em>Everyone</em></strong> to agree to discard (or merge) old pull requests</del></li>
-        <li><del><strong>@tidoust</strong> to add a test case for <code>MediaSource.addSourceBuffer()</code> that sets the <em>generate timestamps flag</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3224">#3224</a>)</li>
-        <li><del><strong>@tidoust</strong> to add a test case for step 2 of <em>Duration change</em></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3232">#3232</a>)</li>
-        <li><del><strong>@tidoust</strong> to add a test case for step 5 of <em>Duration change</em></del> (<em>good enough</em>)</li>
-        <li><del><strong>@tidoust</strong> to add a test case for <code>TrackDefault.getKinds()</code></del> (no longer needed)</li>
-        <li><del><strong>@tidoust</strong> to add missing test cases for <code>VideoPlaybackQuality</code></del> (done in <a href="https://github.com/w3c/web-platform-tests/pull/3231">#3231</a>)</li>
-        <li><del><strong>@tidoust</strong> to review existing tests and update those that assume support for a particular codec for no particular reason</del> (<em>good enough</em>)</li>
-        <li><del><strong>@tidoust</strong> to review algorithms and consider additional corner case tests</del> (<em>good enough</em>)</li>
-        <li><del><strong>@plh</strong> to write missing tests for <code>SourceBuffer</code> algorithms, see table below</del> (<em>good enough</em>)</li>
       </ul>
     </section>
 
